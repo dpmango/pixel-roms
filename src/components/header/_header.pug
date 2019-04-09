@@ -1,0 +1,33 @@
+// HEADER :: START
+header.header
+  .container
+    .header__wrapper
+      a(href="homepage.html").header__logo
+        +svgColor('logo')
+      ul.header__menu
+        li
+          a(href="homepage.html") Home
+        li
+          a(href="page.html") Roms
+        li
+          a(href="page.html") Emulators
+        li
+          a(href="page.html") Bios
+
+      .header__hamburger
+        .hamburger.hamburger--squeeze(js-hamburger)
+          .hamburger-box
+            .hamburger-inner
+
+// MOBILE NAVI
+.mobile-navi
+  .mobile-navi__wrapper
+    ul.mobile-navi__menu
+      li
+        a(href="homepage.html") Homepage
+      li
+        a(href="page.html") Shop
+      li
+        a(href="page.html") Lorem
+    .mobile-navi__cta
+      a(href="mailto:sergey@khmelevskoy.co") sergey@khmelevskoy.co

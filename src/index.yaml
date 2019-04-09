@@ -1,0 +1,15 @@
+ProjectTitle: Pixel-roms
+
+PageList:
+  - file: homepage.html
+    ready: 20
+  - file: consoles-list.html
+    ready: 0
+  - file: roms-list.html
+    ready: 0
+  - file: rom.html
+    ready: 0
+  - file: top-roms.html
+    ready: 0
+  - file: ui.html
+    ready: 10

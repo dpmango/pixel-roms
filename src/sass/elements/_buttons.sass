@@ -1,0 +1,20 @@
+// buttons
+button
+  -webkit-appearance: none
+  border: 0
+  box-shadow: none
+  cursor: pointer
+  &:focus
+    outline: none
+
+.btn
+  display: inline-block
+  position: relative
+  text-align: center
+  cursor: pointer
+  transition: all $transitionSpeed $ease
+  &:focus, &:active
+    outline: none
+  &--block
+    display: block
+    width: 100%

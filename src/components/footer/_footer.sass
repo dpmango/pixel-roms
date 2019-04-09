@@ -1,0 +1,27 @@
+// FOOTER
+.footer
+  background: #f5f5f5
+  &__top, &__bottom
+    display: flex
+    align-items: center
+
+  &__top
+    border-top: 1px solid $borderColor
+    padding: 10px 0
+
+  &__bottom
+    border-top: 1px solid $borderColor
+    padding: 25px 0
+
+  &__menu
+    margin: 0 -7px 0 auto
+    padding: 0
+    li
+      font-size: 14px
+      a
+        display: inline-block
+        color: $colorDarkBlue
+        padding: 7px
+        transition: color .25s $ease
+        &:hover
+          color: $colorBlue

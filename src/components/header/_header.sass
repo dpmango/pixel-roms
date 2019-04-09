@@ -1,0 +1,93 @@
+/* HEADER
+.header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  z-index: 9
+  background: transparent
+  will-change: transform
+  backface-visibility: hidden
+  transform-style: preserve-3d
+  &__wrapper
+    display: flex
+    align-items: center
+    padding: 12px 0
+
+  &__logo
+    flex: 0 0 auto
+    font-size: 0
+    padding-right: 30px
+    .ico
+      font-size: 53px
+
+  &__menu
+    flex: 0 1 auto
+    display: flex
+    align-items: center
+    margin: 0 -10px 0 auto
+    padding: 0
+    li
+      display: inline-block
+      font-family: $acentFont
+      text-transform: uppercase
+      font-size: 14px
+      letter-spacing: 0.05em
+    a
+      position: relative
+      display: inline-block
+      padding: 10px
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        bottom: 5px
+        left: 10px
+        height: 1px
+        right: calc(100% - 10px)
+        background: currentColor
+        transition: right .25s $ease
+      &:hover
+        &::after
+          right: 12px
+    li.is-active
+      a::after
+        right: 12px
+
+
+  &__hamburger
+    display: none
+    padding-left: 20px
+
+  &.is-fixed
+    position: fixed
+    transform: translate3d(0,-100%,0) !important
+    transition: transform .25s $ease
+    .header__wrapper
+      padding-top: 10px
+      padding-bottom: 10px
+
+  &.is-fixed-visible
+    transform: translate3d(0,0,0) !important
+
+  &.is-transitioning
+    transition: transform .25s $ease
+    transform: translate3d(0,-100%,0) !important
+
+
++r($lg)
+  .header
+
+
++r($md)
+  .header
+    &__menu
+      display: none
+    &__hamburger
+      margin-left: auto
+      display: block
+
++r($sm)
+  .header
+    &__logo
+      font-size: 30px

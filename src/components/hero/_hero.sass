@@ -1,0 +1,30 @@
+.hero
+  position: relative
+  z-index: 1
+  overflow: hidden
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  &__background
+    flex: 1 1 auto
+    position: relative
+    z-index: 1
+    svg
+      position: absolute
+      top: 50%
+      left: 50%
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
+      transform: translate(-50%,-50%)
+  &__content
+    position: absolute 0
+    z-index: 2
+    padding-top: 120px
+
+  &__title
+    text-align: center
+    max-width: 730px
+    margin-left: auto
+    margin-right: auto
