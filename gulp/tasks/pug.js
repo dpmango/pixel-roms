@@ -29,10 +29,6 @@ gulp.task('pug:changed', function() {
 });
 
 gulp.task('pug:watch', function() {
-  gulp.watch(
-    [config.src.templates + '/**/_*.pug', config.src.components + '/**/*.pug'],
-    { cwd: './' },
-    ['pug']
-  );
-  gulp.watch([config.src.templates + '/**/[^_]*.pug'], { cwd: './' }, ['pug:changed']);
+  gulp.watch([config.src.templates + '/**/_*.pug', config.src.components + '/**/*.pug'], ['pug']);
+  gulp.watch([config.src.templates + '/**/[^_]*.pug'], ['pug:changed']);
 });

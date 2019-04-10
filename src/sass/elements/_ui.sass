@@ -14,19 +14,42 @@
   -webkit-appearance: none
   display: block
   width: 100%
+  padding: 13px 15px 12px
   background: white
-  font-family: $systemFont
-  color: $fontColorGray
-  border: 1px solid $borderColor
-  border-radius: 4px
-  padding: 12px 15px
+  font-family: $baseFont
+  font-size: 16px
+  color: $fontColor
+  border: 1px solid transparent
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 12px
+  transition: box-shadow .25s $ease
+  &::placeholder
+    color: $fontColorGray
   &.has-error
     color: $colorRed
     &::placeholder
       color: rgba($colorRed, .5)
+  &:focus
+    box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16);
 
 .ui-input textarea
   resize: vertical
+
+// parent for .ui-input
+.ui-input-iconed
+  position: relative
+  color: rgba($fontColor, .4)
+  transition: color .25s $ease
+  .ico
+    position: absolute
+    top: 50%
+    left: 16px
+    transform: translateY(-50%)
+    font-size: 24px
+  .ui-input
+    padding-left: 52px
+  &.is-focused
+    color: $fontColor
 
 
 
