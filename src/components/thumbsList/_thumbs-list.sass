@@ -1,0 +1,45 @@
+.thumbs-list
+  margin: 40px 0
+  &__head
+    display: flex
+    align-items: center
+  &__cta
+    margin-left: auto
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    margin-left: -12px
+    margin-right: -12px
+  &__col
+    width: 100%
+    flex: 0 0 $col2
+    max-width: $col2
+    min-width: 1px
+    min-height: 0
+    padding-left: 12px
+    padding-right: 12px
+    margin-top: 30px
+
++r($lg)
+  .thumbs-list
+    &__col
+      flex-basis: 20%
+      max-width: 20%
+
++r(850)
+  .thumbs-list
+    &__col
+      flex-basis: $col3
+      max-width: $col3
+
++r(700)
+  .thumbs-list
+    &__col
+      flex-basis: $col4
+      max-width: $col4
+
++r($sm)
+  .thumbs-list
+    &__col
+      flex-basis: $col6
+      max-width: $col6

@@ -1,0 +1,6 @@
+mixin romThumb(name, category, img)
+  a(href='#').r-thumb
+    .r-thumb__image
+      img(src='img/thumbs/' + img + '.jpg' srcset='img/thumbs/' + img + '@2x.jpg 2x')
+    .r-thumb__category!= category
+    .r-thumb__name!= name

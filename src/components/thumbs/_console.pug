@@ -1,0 +1,5 @@
+mixin consoleThumb(name, img)
+  a(href='#').c-thumb
+    .c-thumb__image
+      img(src='img/thumbs/' + img + '.png' srcset='img/thumbs/' + img + '@2x.png 2x')
+    .c-thumb__name!= name

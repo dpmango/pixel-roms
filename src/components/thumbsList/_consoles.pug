@@ -1,0 +1,34 @@
+include ../thumbs/_console
+
+-
+  var cards = [
+    ["Gameboy Advance", "c-gameBoyAdvance"],
+    ["Super Nintendo", "c-SuperNintendo"],
+    ["Nintendo DS", "c-NintendoDS"],
+    ["Gameboy Color", "c-GameboyColor"],
+    ["GBA ROMs", "c-GameBoy"],
+    ["Nintendo 64", "c-Nintendo64"],
+
+    ["Nintendo ES", "c-NintendoES"],
+    ["PlayStation", "c-PlayStation"],
+    ["PlayStation 2", "c-PlayStation2"],
+    ["PlayStation Portable", "c-PSP"],
+    ["Nintendo Gamecube", "c-NintendoGamecube"],
+    ["Nintendo Wii", "c-NintendoWii"]
+  ]
+
+
+// POPULAR CONSOLES
+.thumbs-list
+  .container
+    .thumbs-list__head
+      h3.h7-title.iconed-title
+        .iconed-title__icon
+          +svgMono('star')
+        span Popular consoles
+      .thumbs-list__cta
+        a(href="#").btn.btn-primary View all
+    .thumbs-list__grid
+      each card, index in cards
+        .thumbs-list__col
+          +consoleThumb(card[0], card[1])
