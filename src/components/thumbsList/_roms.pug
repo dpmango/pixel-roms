@@ -4,20 +4,20 @@ include ../thumbs/_rom
   var cards = [
     ["Pokemon - Fire Red Version (V1.1)", "Gameboy Advance", "r-Cover_1"],
     ["Pokemon - Emerald Version", "Gameboy Advance", "r-Cover_2"],
-    ["Super Mario World", "Super Nintendo", "r-Cover_3"],
+    ["Super Mario World", "Super Nintendo", "r-Cover_3", 101/144],
     ["Pokemon - Ruby Version (V1.1)", "Gameboy Advance", "r-Cover_4"],
     ["Pokemon - Leaf Green Version (V1.1)", "Gameboy Advance", "r-Cover_5"],
-    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6"],
+    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6", 129/144],
 
-    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6"],
+    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6", 129/144],
     ["Pokemon - Emerald Version", "Gameboy Advance", "r-Cover_2"],
     ["Pokemon - Fire Red Version (V1.1)", "Gameboy Advance", "r-Cover_1"],
-    ["Super Mario World", "Super Nintendo", "r-Cover_3"],
+    ["Super Mario World", "Super Nintendo", "r-Cover_3", 101/144],
     ["Pokemon - Ruby Version (V1.1)", "Gameboy Advance", "r-Cover_4"],
     ["Pokemon - Leaf Green Version (V1.1)", "Gameboy Advance", "r-Cover_5"],
 
-    ["Super Mario World", "Super Nintendo", "r-Cover_3"],
-    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6"],
+    ["Super Mario World", "Super Nintendo", "r-Cover_3", 101/144],
+    ["5585 - Pokemon - Black Version", "Nintendo DS", "r-Cover_6", 129/144],
     ["Pokemon - Fire Red Version (V1.1)", "Gameboy Advance", "r-Cover_1"],
     ["Pokemon - Emerald Version", "Gameboy Advance", "r-Cover_2"],
     ["Pokemon - Ruby Version (V1.1)", "Gameboy Advance", "r-Cover_4"],
@@ -37,4 +37,4 @@ include ../thumbs/_rom
     .thumbs-list__grid
       each card, index in cards
         .thumbs-list__col
-          +romThumb(card[0], card[1], card[2])
+          +romThumb(card[0], card[1], card[2], card[3])
