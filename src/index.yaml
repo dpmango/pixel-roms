@@ -2,7 +2,7 @@ ProjectTitle: Pixel-roms
 
 PageList:
   - file: homepage.html
-    ready: 60
+    ready: 80
   - file: consoles-list.html
     ready: 0
   - file: roms-list.html

@@ -65,6 +65,10 @@
     background: black
     color: white
     transition: background .25s $ease, transform .25s $ease
+    .hamburger-inner
+      background-color: white
+      &::before, &::after
+        background-color: white
 
   // &.is-fixed-visible
   //   transform: translate3d(0,0,0) !important
@@ -74,19 +78,13 @@
     transform: translate3d(0,-100%,0) !important
 
 
-+r($lg)
++r($sm)
   .header
-    // tbd
-
-+r($md)
-  .header
+    &__logo
+      .ico
+       font-size: 42px
     &__menu
       display: none
     &__hamburger
       margin-left: auto
       display: block
-
-+r($sm)
-  .header
-    &__logo
-      font-size: 30px

@@ -13,6 +13,9 @@
     border-top: 1px solid $borderColor
     padding: 25px 0
 
+  &__title
+    flex: 0 0 auto
+
   &__menu
     margin: 0 -7px 0 auto
     padding: 0
@@ -25,3 +28,18 @@
         transition: color .25s $ease
         &:hover
           color: $colorBlue
+
++r($md)
+  .footer
+    &__top, &__bottom
+      flex-wrap: wrap
+
+    &__title
+      flex: 0 0 100%
+      text-align: center
+      margin-bottom: 0.5em
+
+    &__menu
+      flex: 0 0 100%
+      margin-right: auto
+      text-align: center
