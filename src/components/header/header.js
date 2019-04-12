@@ -6,6 +6,7 @@
     data: {
       header: {
         container: undefined,
+        headerHeight: undefined,
         stickyPoint: undefined,
       },
     },
@@ -26,6 +27,7 @@
 
       this.data.header = {
         container: $header,
+        headerHeight: $header.outerHeight(),
         stickyPoint: firstSectionHeight,
       };
     },
@@ -58,7 +60,7 @@
 
         if (scroll.blocked) return;
 
-        if (scroll.y > this.data.header.stickyPoint) {
+        if (scroll.y > this.data.header.stickyPoint - this.data.header.headerHeight / 2) {
           this.data.header.container.addClass(fixedClass);
         } else {
           this.data.header.container.removeClass(fixedClass);

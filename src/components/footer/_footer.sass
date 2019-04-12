@@ -7,20 +7,25 @@
 
   &__top
     border-top: 1px solid $borderColor
-    padding: 10px 0
+    padding: 9px 0
+    text-align: right
 
   &__bottom
     border-top: 1px solid $borderColor
-    padding: 25px 0
+    padding: 24px 0
 
   &__title
     flex: 0 0 auto
+    padding-right: 1em
 
   &__menu
-    margin: 0 -7px 0 auto
+    margin: 0 0px 0 auto
     padding: 0
+    white-space: nowrap
+    overflow: hidden
     li
       font-size: 14px
+      line-height: 1.42
       a
         display: inline-block
         color: $colorDarkBlue
@@ -28,8 +33,11 @@
         transition: color .25s $ease
         &:hover
           color: $colorBlue
+      &:last-child
+        a
+          padding-right: 0
 
-+r($md)
++r(850)
   .footer
     &__top, &__bottom
       flex-wrap: wrap
@@ -37,9 +45,11 @@
     &__title
       flex: 0 0 100%
       text-align: center
+      padding-right: 0
       margin-bottom: 0.5em
 
     &__menu
       flex: 0 0 100%
       margin-right: auto
       text-align: center
+      white-space: normal
