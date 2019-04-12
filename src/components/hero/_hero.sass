@@ -43,3 +43,40 @@
       padding-top: 90px
     &__search
       margin-top: 40px
+
+
+// animation part
+.hero__background svg
+  // #box-cup
+    // animation-name: moveCup
+    // animation-duration: 2s
+    // animation-timing-function: ease
+    // animation-iteration-count: infinite
+  #coin-1, #coin-2, #coin-3, #coin-4, #coin-5
+    path
+      animation-name: moveCoins
+      animation-duration: 2s
+      animation-timing-function: ease
+      animation-iteration-count: infinite
+  #coin-1
+    path
+      animation-delay: .333s
+  #coin-2
+    path
+      animation-delay: .666s
+  #coin-3
+    path
+      animation-delay: 1s
+  #coin-4
+    path
+      animation-delay: 1.333s
+  #coin-5
+    path
+      animation-delay: 1.666s
+
+@keyframes moveCoins
+  from, to
+    transform: translate3d(0,0px,0)
+  50%
+    transform: translate3d(0,-20px,0 )
+
