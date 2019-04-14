@@ -1,0 +1,52 @@
+---
+title: Bioses
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var list = [
+      {console: "Acorn 8 bit", roms: "2,518", downloads: "84,500,282", size: "469.9KB"},
+      {console: "Acorn Archimedes", roms: "4,259", downloads: "64,204", size: "109.5MB"},
+      {console: "Acorn Electron", roms: "6,214", downloads: "693", size: "2.0GB"},
+    ]
+
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "BIOSes"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title List of available consoles
+
+      // FILTERS
+      .catalog__filters.filters
+        .filters__keyword
+          .ui-input-iconed(js-input-focus)
+            +svgMono('search')
+            input(type="text" placeholder="Search for BIOS ...").ui-input
+
+      // LIST
+      .catalog__list
+        table.table.table--consoles
+          thead
+            tr
+              td Console
+              td Total Emulators
+              td Total downloads
+              td Total size
+          tbody
+            each row, index in list
+              tr
+                td!= row.console
+                td!= row.roms
+                td!= row.downloads
+                td!= row.size

@@ -1,0 +1,90 @@
+---
+title: ROMS Console
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var list = [
+      {console: "Pokemon - Fire Red Version (V1.1)", rating: "4", downloads: "14,413,107"},
+      {console: "Pokemon - Emerald Version", rating: "4.5", downloads: "14,413,107"},
+      {console: "Pokemon - Ruby Version (V1.1)", rating: "4.7", downloads: "14,413,107"},
+      {console: "Pokemon - Leaf Green Version (V1.1)", rating: "5", downloads: "14,413,107"},
+      {console: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", rating: "4.8", downloads: "14,413,107"},
+      {console: "Dragonball Z - Buu's Fury", rating: "4.2", downloads: "14,413,107"},
+      {console: "Pokemon - Sapphire Version (V1.1)", rating: "3.5", downloads: "14,413,107"},
+      {console: "Super Mario Advance 2 - Super Mario World", rating: "3.8", downloads: "14,413,107"},
+      {console: "Classic NES - Super Mario Bros.", rating: "2.5", downloads: "14,413,107"},
+      {console: "Grand Theft Auto Advance", rating: "3", downloads: "14,413,107"},
+      {console: "Legend Of Zelda, The - The Minish Cap", rating: "2.3", downloads: "14,413,107"},
+      {console: "Pokemon Jupiter - 6.04 (Ruby Hack)", rating: "4.5", downloads: "14,413,107"},
+      {console: "Kirby - Nightmare In Dreamland", rating: "2.4", downloads: "14,413,107"},
+      {console: "Pokemon Black - Special Palace Edition 1 By MB Hacks (Red Hack) Goomba V2.2", rating: "4.5", downloads: "14,413,107"},
+      {console: "Dragonball Z - Supersonic Warriors", rating: "5", downloads: "14,413,107"},
+      {console: "Legend Of Zelda, The - A Link To The Past Four Swords", rating: "4.5", downloads: "14,413,107"},
+      {console: "Naruto - Ninja Council 2", rating: "4", downloads: "14,413,107"},
+      {console: "Pokemon Mystery Dungeon - Red Rescue Team", rating: "1", downloads: "14,413,107"},
+      {console: "Metal Slug Advance", rating: "2", downloads: "14,413,107"},
+      {console: "Pokemon White Version By MB Hacks (Blue Hack)_GoombaV2.2", rating: "3", downloads: "14,413,107"},
+    ]
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "ROMs", "Gameboy Advance"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title.imaged-title
+          img(src='img/thums/c-gameBoyAdvance.png' srcset='img/thumbs/c-gameBoyAdvance@2x.png 2x')
+          span Gameboy Advance ROMs
+
+      .catalog__ad
+        include ../components/ads/_horizontal
+
+      // FILTERS
+      .catalog__filters
+        include ../components/filters/_filters
+
+
+      // LIST
+      .catalog__list
+        table.table.table--roms
+          thead
+            tr
+              td Game title
+              td Rating
+              td Downloads
+          tbody
+            each row, index in list
+              tr
+                td!= row.console
+                td
+                  .rating
+                    .rateit.svg(
+                      data-rateit-value=row.rating
+                      data-rateit-readonly="true"
+                      data-rateit-starwidth="28"
+                      data-rateit-starheight="22"
+                      data-rateit-resetable="false")
+                    span.rating__number!= row.rating
+                td!= row.downloads
+
+        include ../components/pagination/_pagination
+
+      .text-info
+        h3.h7-title.iconed-title
+          .iconed-title__icon
+            +svgColor('bomb')
+          span Gameboy ROMs / GBA ROMs download for free
+        p.p-small Gameboy Advance is a perfect tool for gaming and gaming is currently one of the most popular pastimes in the entire world, and it has been incredibly popular for many decades now. The gaming industry is one of the most competitive and lucrative industries in the entire world, and when you consider just how many different games consoles and manufacturers currently in the field, it’s easy to understand why that is. One company however, that many believe is synonymous with the gaming industry itself, is Nintendo, who have released some truly amazing consoles over the years. One particular games console that revolutionized the way we played games at the time, was the Gameboy, which was a handheld gaming device released back in the late 80s that became insanely popular. The Gameboy was so successful and popular, in fact, that nearly three decades later, we are still playing with Gameboys and are enjoying them more than ever. The Game boy advance is the latest incarnation of the Gameboy, and if you’re looking to take your gaming outdoors and on the go, this is the device for you.
+
+
+  // TODO - not mathcing margins or extra container
+  //- include ../components/seo/_seo

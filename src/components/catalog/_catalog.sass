@@ -1,0 +1,98 @@
+// CATALOG
+.catalog
+  &__title
+
+  &__ad
+    margin: 24px 0
+  &__filters
+    margin: 30px 0 24px
+
+  &__list
+    margin: 30px 0 50px
+
+.filters
+  display: flex
+  // flex-wrap: wrap
+  margin-left: -12px
+  margin-right: -12px
+  &__keyword
+    flex: 0 1 504px
+    padding-left: 12px
+    padding-right: 12px
+  &__select
+    flex: 0 0 252px
+    padding-left: 12px
+    padding-right: 12px
+
+
+.table
+  border-collapse: collapse
+  margin: 0
+  padding: 0
+  width: 100%
+  border-radius: 12px
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
+  thead
+    td
+      background: $colorBlue
+      color: white
+      font-size: 14px
+      padding-bottom: 16px
+      padding-top: 16px
+      &:first-child
+        border-top-left-radius: 12px
+      &:last-child
+        border-top-right-radius: 12px
+
+  tbody
+    tr
+      &:nth-child(even)
+        background: #F3F9FE
+      &:nth-child(odd)
+        background: white
+      &:last-child
+        td:first-child
+          border-bottom-left-radius: 12px
+        td:last-child
+          border-bottom-right-radius: 12px
+
+
+  // common tabel styles
+  tr
+
+  td
+    font-size: 16px
+    line-height: 1.5
+    padding: 14px 10px
+    vertical-align: top
+    a
+      color: $colorDarkBlue
+      transition: color .25s $ease
+      &:hover
+        color: $colorBlue
+
+    &:first-child
+      padding-left: 24px
+    &:last-child
+      padding-right: 24px
+
+
+  &--consoles
+    td
+      &:nth-child(1)
+        width: 50%
+      &:nth-child(2)
+        width: 18%
+      &:nth-child(3)
+        width: 17%
+      &:nth-child(4)
+        width: 17%
+
+  &--roms
+    td
+      &:nth-child(1)
+        width: 52%
+      &:nth-child(2)
+        width: 20%
+      &:nth-child(3)
+        width: 20%

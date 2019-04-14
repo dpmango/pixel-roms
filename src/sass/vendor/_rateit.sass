@@ -1,0 +1,105 @@
+.rateit
+  display: -moz-inline-box
+  display: inline-block
+  position: relative
+  user-select: none
+  -webkit-touch-callout: none
+  .rateit-range
+    position: relative
+    display: -moz-inline-box
+    display: inline-block
+    height: 16px
+    outline: none
+    *
+      display: block
+
+*
+  html .rateit, + html .rateit
+    display: inline
+    .rateit-range
+      display: inline
+
+
+.rateit
+  .rateit-hover, .rateit-selected
+    position: absolute
+    left: 0
+    top: 0
+    width: 0
+  .rateit-hover
+    color: rgb(239, 197, 41)
+  .rateit-selected
+    color: rgb(191, 66, 66)
+  .rateit-preset
+
+    color: rgb(239, 107, 34)
+
+  button.rateit-reset
+    background: tomato
+    width: 16px
+    height: 16px
+    display: -moz-inline-box
+    display: inline-block
+    float: left
+    outline: none
+    border: none
+    padding: 0
+  .rateit-reset span
+    display: none
+
+
+.rateit-font
+  font-size: 24px
+  line-height: 1em
+  .rateit-range
+    background: none
+    height: auto
+  .rateit-empty
+    color: #ccc
+  .rateit-range > div
+    background: none
+    overflow: hidden
+    cursor: default
+
+.rateit.rateit-font
+  .rateit-reset
+    font-size: inherit
+    background: none
+    width: 0.6em
+    height: 0.6em
+    margin-top: 0.2em
+    background: gray
+    border-radius: 50%
+    position: relative
+    span
+      display: block
+      font-weight: bold
+      color: white
+      height: calc(50% - 0.045em)
+      top: 0
+      position: absolute
+      border-bottom: 0.09em solid white
+      width: 72%
+      margin-left: 14%
+    &:hover
+      background: #e6574b
+      background: radial-gradient(ellipse at center, #e6574b 55%, #f6836b 77%, #f9d3cc 100%)
+      background-position: 0 0
+  button.rateit-reset:focus
+    background: #e6574b
+    background: radial-gradient(ellipse at center, #e6574b 55%, #f6836b 77%, #f9d3cc 100%)
+    background-position: 0 0
+
+div.svg div
+  &.rateit-range
+    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNXB4Ij4NCiAgPHRleHQgeD0iMCIgeT0iMTUiIGZpbGw9ImJsYWNrIiBmb250LXNpemU9IjE4Ij7inKY8L3RleHQ+DQo8L3N2Zz4=')
+    background: svg-load('../icons/svg-mono/star-rate-blank.svg')
+  &.rateit-hover
+    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiPg0KICA8dGV4dCB4PSIwIiB5PSIxNSIgZmlsbD0ieWVsbG93IiBmb250LXNpemU9IjE4Ij7inKY8L3RleHQ+DQo8L3N2Zz4=')
+    background: svg-load('../icons/svg-mono/star-rate-fill.svg')
+  &.rateit-selected
+    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiPg0KICA8dGV4dCB4PSIwIiB5PSIxNSIgZmlsbD0icmVkIiBmb250LXNpemU9IjE4Ij7inKY8L3RleHQ+DQo8L3N2Zz4=')
+    background: svg-load('../icons/svg-mono/star-rate-fill.svg')
+  &.rateit-preset
+    // background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj4NCiAgPHRleHQgeD0iMCIgeT0iMTUiIGZpbGw9ImJsYWNrIiBmb250LXNpemU9IjE1Ij7inKY8L3RleHQ+DQo8L3N2Zz4=')
+    background: svg-load('../icons/svg-mono/star-rate-blank.svg')

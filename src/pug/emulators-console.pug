@@ -1,0 +1,67 @@
+---
+title: Emulators Console
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var list = [
+      {console: "Pokemon - Fire Red Version (V1.1)", platform: "Windows", rating: "4", downloads: "14,413,107"},
+      {console: "Pokemon - Emerald Version", platform: "MacOs", rating: "4.5", downloads: "14,413,107"},
+      {console: "Pokemon - Ruby Version (V1.1)", platform: "Linux", rating: "4.7", downloads: "14,413,107"},
+      {console: "Pokemon - Leaf Green Version (V1.1)", platform: "iOS", rating: "5", downloads: "14,413,107"},
+      {console: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", platform: "Windows", rating: "4.8", downloads: "14,413,107"},
+      {console: "Dragonball Z - Buu's Fury", platform: "Windows", rating: "4.2", downloads: "14,413,107"},
+      {console: "Pokemon - Sapphire Version (V1.1)", platform: "Linus", rating: "3.5", downloads: "14,413,107"},
+      {console: "Super Mario Advance 2 - Super Mario World", platform: "Windows", rating: "3.8", downloads: "14,413,107"},
+      {console: "Classic NES - Super Mario Bros.", platform: "iOS", rating: "2.5", downloads: "14,413,107"},
+      {console: "Grand Theft Auto Advance", platform: "Windows", rating: "3", downloads: "14,413,107"},
+    ]
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "Emulators", "Gameboy Advance"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title.imaged-title Gameboy Advance emulators
+
+      .catalog__ad
+        include ../components/ads/_horizontal
+
+      // FILTERS
+      .catalog__filters
+        include ../components/filters/_filters
+
+
+      // LIST
+      .catalog__list
+        table.table.table--roms
+          thead
+            tr
+              td Game title
+              td Platform
+              td Rating
+              td Downloads
+          tbody
+            each row, index in list
+              tr
+                td!= row.console
+                td!= row.platform
+                td
+                  .rating
+                    .rateit.svg(
+                      data-rateit-value=row.rating
+                      data-rateit-readonly="true"
+                      data-rateit-starwidth="28"
+                      data-rateit-starheight="22"
+                      data-rateit-resetable="false")
+                    span.rating__number!= row.rating
+                td!= row.downloads

@@ -3,13 +3,23 @@ ProjectTitle: Pixel-roms
 PageList:
   - file: homepage.html
     ready: 90
-  - file: consoles-list.html
-    ready: 0
-  - file: roms-list.html
-    ready: 0
-  - file: rom.html
+  - file: roms.html
+    ready: 60
+  - file: roms-console.html
+    ready: 60
+  - file: game.html
     ready: 0
   - file: top-roms.html
+    ready: 60
+  - file: emulators.html
+    ready: 60
+  - file: emulators-console.html
+    ready: 60
+  - file: emulator.html
+    ready: 0
+  - file: bioses.html
+    ready: 60
+  - file: bios.html
     ready: 0
   - file: ui.html
     ready: 10

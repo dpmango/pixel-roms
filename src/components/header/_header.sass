@@ -33,6 +33,9 @@
       text-transform: uppercase
       font-size: 14px
       letter-spacing: 0.05em
+      margin-right: 18px
+      &:last-child
+        margin-right: 0
     a
       position: relative
       display: inline-block
@@ -59,7 +62,7 @@
     display: none
     padding-left: 20px
 
-  &.is-fixed
+  &.is-fixed, &[data-modifier="is-black"]
     position: fixed
     // transform: translate3d(0,-100%,0) !important
     background: black

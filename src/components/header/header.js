@@ -12,7 +12,8 @@
     },
     init: function() {
       this.getHeaderParams();
-      this.updateHeaderActiveClass();
+      this.setMenuClass();
+      this.controlHeaderClass();
       this.hamburgerClickListener();
       this.listenScroll();
       this.listenResize();
@@ -67,7 +68,7 @@
         }
       }
     },
-    updateHeaderActiveClass: function() {
+    setMenuClass: function() {
       // SET ACTIVE CLASS IN HEADER
       // * could be removed in production and server side rendering when header is inside barba-container
       var headerMenuList = $('.header__menu li');
@@ -75,15 +76,31 @@
 
       headerMenuList.each(function(i, val) {
         if (
-          $(val)
-            .find('a')
-            .attr('href') === window.location.pathname.split('/').pop()
+          window.location.pathname
+            .split('/')
+            .pop()
+            .indexOf(
+              $(val)
+                .find('a')
+                .attr('href')
+            ) !== -1
         ) {
           $(val).addClass('is-active');
         } else {
           $(val).removeClass('is-active');
         }
       });
+    },
+    controlHeaderClass: function() {
+      this.data.header.container.attr('data-modifier', false);
+
+      var $modifierElement = $('.page')
+        .last()
+        .find('[js-header-class]');
+
+      if ($modifierElement.length > 0) {
+        this.data.header.container.attr('data-modifier', $modifierElement.data('class'));
+      }
     },
   };
 })(jQuery, window.APP);

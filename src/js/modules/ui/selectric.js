@@ -9,9 +9,9 @@
 
       $select.selectric({
         maxHeight: 300,
+        responsive: true,
         arrowButtonMarkup:
-          '<b class="button"><svg class="ico ico-select-down"><use xlink:href="img/sprite.svg#ico-select-down"></use></svg></b>',
-
+          '<div class="button"><svg class="ico ico-mono-dropdown-arrow"><use xlink:href="img/sprite-mono.svg#ico-mono-dropdown-arrow"></use></svg></div>',
         onInit: function(element, data) {
           var $elm = $(element),
             $wrapper = $elm.closest('.' + data.classes.wrapper);

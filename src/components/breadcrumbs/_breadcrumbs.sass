@@ -1,0 +1,25 @@
+
+
+// Breadcrumbs
+.breadcrumbs
+  margin: 25px 0
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      font-size: 14px
+    a, span
+      display: inline-block
+      line-height: 1.42
+    a
+      color: $colorDarkBlue
+      transition: color .25s $ease
+      &::after
+        display: inline-block
+        content: '>'
+        color: $fontColor
+        margin-left: 10px
+      &:hover
+        color: $colorBlue

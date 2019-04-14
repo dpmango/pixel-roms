@@ -1,0 +1,76 @@
+---
+title: TOP 100 ROMs
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var list = [
+      {console: "Pokemon - Fire Red Version (V1.1)", rating: "4", console: "Gameboy Advance"},
+      {console: "Pokemon - Emerald Version", rating: "4.5", console: "Gameboy Advance"},
+      {console: "Pokemon - Ruby Version (V1.1)", rating: "4.7", console: "Gameboy Advance"},
+      {console: "Pokemon - Leaf Green Version (V1.1)", rating: "5", console: "Gameboy Advance"},
+      {console: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", rating: "4.8", console: "Gameboy Advance"},
+      {console: "Dragonball Z - Buu's Fury", rating: "4.2", console: "Gameboy Advance"},
+      {console: "Pokemon - Sapphire Version (V1.1)", rating: "3.5", console: "Gameboy Advance"},
+      {console: "Super Mario Advance 2 - Super Mario World", rating: "3.8", console: "Gameboy Advance"},
+      {console: "Classic NES - Super Mario Bros.", rating: "2.5", console: "Gameboy Advance"},
+      {console: "Grand Theft Auto Advance", rating: "3", console: "Gameboy Advance"},
+      {console: "Legend Of Zelda, The - The Minish Cap", rating: "2.3", console: "Gameboy Advance"},
+      {console: "Pokemon Jupiter - 6.04 (Ruby Hack)", rating: "4.5", console: "Gameboy Advance"},
+      {console: "Kirby - Nightmare In Dreamland", rating: "2.4", console: "Gameboy Advance"},
+      {console: "Pokemon Black - Special Palace Edition 1 By MB Hacks (Red Hack) Goomba V2.2", rating: "4.5", console: "Gameboy Advance"},
+      {console: "Dragonball Z - Supersonic Warriors", rating: "5", console: "Gameboy Advance"},
+      {console: "Legend Of Zelda, The - A Link To The Past Four Swords", rating: "4.5", console: "Gameboy Advance"},
+      {console: "Naruto - Ninja Council 2", rating: "4", console: "Gameboy Advance"},
+      {console: "Pokemon Mystery Dungeon - Red Rescue Team", rating: "1", console: "Gameboy Advance"},
+      {console: "Metal Slug Advance", rating: "2", console: "Gameboy Advance"},
+      {console: "Pokemon White Version By MB Hacks (Blue Hack)_GoombaV2.2", rating: "3", console: "Gameboy Advance"},
+    ]
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "ROMs", "Top 100"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title Top 100 ROM games
+
+      .catalog__ad
+        include ../components/ads/_horizontal
+
+      // FILTERS
+      .catalog__filters
+        include ../components/filters/_filters
+
+      // LIST
+      .catalog__list
+        table.table.table--roms
+          thead
+            tr
+              td Game title
+              td Rating
+              td Console
+          tbody
+            each row, index in list
+              tr
+                td!= row.console
+                td
+                  .rating
+                    .rateit.svg(
+                      data-rateit-value=row.rating
+                      data-rateit-readonly="true"
+                      data-rateit-starwidth="28"
+                      data-rateit-starheight="22"
+                      data-rateit-resetable="false")
+                    span.rating__number!= row.rating
+                td
+                  a(href="#")!= row.console
+

@@ -1,0 +1,74 @@
+---
+title: Emulators
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var list = [
+      {console: "Acorn 8 bit", roms: "2,518", downloads: "84,500,282", size: "469.9KB"},
+      {console: "Acorn Archimedes", roms: "4,259", downloads: "64,204", size: "109.5MB"},
+      {console: "Acorn Electron", roms: "6,214", downloads: "693", size: "2.0GB"},
+      {console: "Amiga 500", roms: "2,518", downloads: "38,434", size: "469.9KB"},
+      {console: "Amstrad CPC", roms: "4,259", downloads: "1,322,954", size: "1.4TB"},
+      {console: "Amstrad GX4000", roms: "2,518", downloads: "84,500,282", size: "159.6MB"},
+      {console: "Apple I", roms: "10,562", downloads: "64,204", size: "469.9KB"},
+      {console: "Apple II", roms: "629", downloads: "8,500,282", size: "1MB"},
+      {console: "Apple II GS", roms: "2,518", downloads: "1,322,954", size: "469.9KB"},
+      {console: "Atari 2600", roms: "4,259", downloads: "22", size: "469.9KB"},
+      {console: "Atari 5200", roms: "629", downloads: "44,078,666", size: "1.4TB"},
+      {console: "Atari 7800", roms: "6210,5629", downloads: "84,500,282", size: "69.2KB"},
+      {console: "Atari 800", roms: "2,518", downloads: "38,434", size: "159.6MB"},
+      {console: "Atari Jaguar", roms: "55", downloads: "1,322,954", size: "19.6MB"},
+      {console: "Atari Lynx", roms: "4,259", downloads: "84,500,282", size: "469.9KB"},
+      {console: "Atari ST", roms: "10,562", downloads: "84,282", size: "9.6MB"},
+      {console: "Bally Pro Arcade Astrocade", roms: "1,454", downloads: "84,282", size: "9.9KB"},
+      {console: "Atari ST", roms: "59", downloads: "38,434", size: "469.9KB"},
+      {console: "BBC Micro", roms: "232", downloads: "84,500", size: "1.4TB"},
+      {console: "Camputers Lynx", roms: "10,562", downloads: "1,322,954", size: "159.6MB"},
+      {console: "Capcom Play System 1", roms: "4,259", downloads: "64,204", size: "1.4TB"},
+      {console: "Capcom Play System 2", roms: "10,562", downloads: "282", size: "29.9KB"},
+      {console: "Casio Loopy", roms: "2,518", downloads: "5,282", size: "469.9KB"},
+      {console: "Casio PV1000", roms: "2,518", downloads: "50,124", size: "999.6MB"},
+      {console: "ColecoVision", roms: "10,562", downloads: "84,500,282", size: "159.6MB"}
+    ]
+
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "Emulators"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title List of available consoles
+
+      // FILTERS
+      .catalog__filters.filters
+        .filters__keyword
+          .ui-input-iconed(js-input-focus)
+            +svgMono('search')
+            input(type="text" placeholder="Search for console ...").ui-input
+
+      // LIST
+      .catalog__list
+        table.table.table--consoles
+          thead
+            tr
+              td Console
+              td Total Emulators
+              td Total downloads
+              td Total size
+          tbody
+            each row, index in list
+              tr
+                td!= row.console
+                td!= row.roms
+                td!= row.downloads
+                td!= row.size
