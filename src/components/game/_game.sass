@@ -1,0 +1,78 @@
+.game
+  margin-bottom: 50px
+  &__grid
+    display: flex
+    margin-left: -12px
+    margin-right: -12px
+  &__col
+    width: 100%
+    min-width: 1px
+    min-height: 0
+    padding-left: 12px
+    padding-right: 12px
+    &--left
+      flex: 0 0 $col8
+      max-width: $col8
+    &--right
+      flex: 0 0 $col4
+      max-width: $col4
+    &--50
+      flex: 0 0 $col6
+      max-width: $col6
+
+  &__main
+    display: flex
+    margin-left: -12px
+    margin-right: -12px
+
+  &__cover
+    font-size: 0
+    img
+      max-width: 100%
+
+  &__info
+    position: relative
+    z-index: 1
+    overflow: hidden
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
+    border-radius: 12px
+
+  &__info-row
+    display: flex
+    span
+      display: inline-block
+      padding: 8px 16px
+      font-size: 14px
+      line-height: 1.42
+      a
+        display: block
+        color: $colorDarkBlue
+        transition: color .25s $ease
+        &:hover
+          color: $colorBlue
+      &:first-child
+        flex: 0 0 40%
+        color: #808080
+        padding-right: 8px
+      &:last-child
+        flex: 0 0 60%
+        padding-left: 8px
+
+    &:nth-child(odd)
+      background: #F3F9FE
+    &:nth-child(even)
+      background: white
+
+    .rateit
+      // margin-top: -8px
+      // margin-bottom: -8px
+      // transform: scale(.7)
+      // transform-origin: left center
+
+  &__cta
+    margin-top: 1em
+
+  &__sponsored
+    margin-top: 40px
+
+  &__sidebar

@@ -60,6 +60,30 @@ p + p
   .h1-title
 
 
+// lists
+.ol-list
+  list-style: none
+  counter-reset: list-counter
+  margin: 0
+  padding: 0
+  li
+    display: block
+    position: relative
+    counter-increment: list-counter
+    font-size: 14px
+    line-height: 1.42
+    padding-left: 30px
+    &::before
+      display: inline-block
+      content: counter(list-counter)". "
+      position: absolute
+      top: 0
+      left: 0
+  a
+    color: $colorDarkBlue
+    transition: .25s $ease
+    &:hover
+      color: $colorBlue
 
 // little inline helpers
 .f-400

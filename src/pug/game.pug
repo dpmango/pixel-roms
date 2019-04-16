@@ -1,0 +1,138 @@
+---
+title: ROM
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  -
+    var sidebar = {
+      roms: [
+        "[GBA] Pokemon - Fire Red Version (V1.1)",
+        "[GBA] Pokemon - Emerald Version",
+        "[GBA] Pokemon - Ruby Version (V1.1)",
+        "[NDS] 5585 - Pokemon - Black Version",
+        "[GBC] Pokemon - Yellow Version",
+        "[NDS] 1015 - Pokemon Diamond",
+        "[NDS] 4788 - Pokemon - SoulSilver Version",
+        "[GBC] Pokemon - Crystal Version (V1.1)",
+        "[GBC] Pokemon - Gold Version",
+        "[NDS] 4787 - Pokemon - HeartGold Version"
+      ],
+      emulators: [
+        "[GBA] No$GBA",
+        "[GBA] My Boy!",
+        "[GBA] VisualBoyAdvance",
+        "[GBA] GBA4iOS",
+        "[GBA] BatGBA",
+        "[GBA] VBA10",
+        "[GBA] DreamGBA",
+        "[GBA] BoycottAdvance",
+        "[GBA] Boycott Advance",
+        "[GBA] RascalBoy Advance"
+      ]
+    }
+
+  // GAME PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "ROMs", "Gameboy Advance", "Pokemon - Fire Red Version (V1.1)"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title Pokemon - Fire Red Version (V1.1)
+
+      .catalog__ad
+        include ../components/ads/_horizontal
+
+      // GAME
+      .game
+        .game__grid
+          .game__col.game__col--left
+            .game__main
+              .game__col.game__col--50
+                .game__cover
+                  img(src='img/romCover.jpg' srcset='img/romCover@2x.jpg 2x')
+              .game__col.game__col--50
+                .game__info
+                  .game__info-row
+                    span Game title
+                    span Pokemon - Fire Red Version (V1.1)
+                  .game__info-row
+                    span File size
+                    span 4.9MB
+                  .game__info-row
+                    span Region
+                    span USA
+                  .game__info-row
+                    span Console
+                    span Gameboy Advance
+                      a(href="#") Download emulator
+                  .game__info-row
+                    span Genre
+                    span Role Playing
+                  .game__info-row
+                    span Downloads
+                    span 14,413,247
+                  .game__info-row
+                    span Rating
+                    span
+                      .rating
+                        .rateit.svg(
+                          data-rateit-value="4.5"
+                          data-rateit-starwidth="28"
+                          data-rateit-starheight="22"
+                          data-rateit-resetable="false")
+                        span.rating__number 4.5
+
+                .game__cta
+                  a(href="#").btn.btn-green.btn-iconed.btn--block
+                    span Download
+                      +svgMono("download")
+
+            .game__sponsored
+              .h7-title Sponsored content
+              include ../components/ads/_boxed
+
+          // sidebar
+          .game__col.game__col--right
+            .game__sidebar
+              .game__list
+                .h7-title Popular ROMs
+                ol.ol-list
+                  each row, index in sidebar.roms
+                    li
+                      a(href="")!= row
+              .game__list
+                .h7-title Top GBA emulators
+                ol.ol-list
+                  each row, index in sidebar.emulators
+                    li
+                      a(href="")!= row
+
+      // RECOMENDED
+      .catalog__recomended
+        include ../components/thumbsList/_recomended
+
+      .catalog__ad
+        include ../components/ads/_horizontal
+
+      // COMMENTS
+      .catalog__comments
+        #disqus_thread
+        script.
+          var disqus_config = function () {
+          this.page.url = "http://localhost:3000/game.html";  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = "1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://pixel-roms.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
