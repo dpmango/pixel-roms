@@ -16,6 +16,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import rateit from 'jquery.rateit';
+import sharer from 'sharer.js';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -38,3 +39,4 @@ window.TweenMax = TweenMax;
 window.debounce = debounce;
 window.throttle = throttle;
 window.rateit = rateit;
+window.sharer = sharer;

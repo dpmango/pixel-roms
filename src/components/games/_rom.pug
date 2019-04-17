@@ -1,0 +1,96 @@
+// ROM GAME
+-
+  var sidebar = {
+    roms: [
+      "[GBA] Pokemon - Fire Red Version (V1.1)",
+      "[GBA] Pokemon - Emerald Version",
+      "[GBA] Pokemon - Ruby Version (V1.1)",
+      "[NDS] 5585 - Pokemon - Black Version",
+      "[GBC] Pokemon - Yellow Version",
+      "[NDS] 1015 - Pokemon Diamond",
+      "[NDS] 4788 - Pokemon - SoulSilver Version",
+      "[GBC] Pokemon - Crystal Version (V1.1)",
+      "[GBC] Pokemon - Gold Version",
+      "[NDS] 4787 - Pokemon - HeartGold Version"
+    ],
+    emulators: [
+      "[GBA] No$GBA",
+      "[GBA] My Boy!",
+      "[GBA] VisualBoyAdvance",
+      "[GBA] GBA4iOS",
+      "[GBA] BatGBA",
+      "[GBA] VBA10",
+      "[GBA] DreamGBA",
+      "[GBA] BoycottAdvance",
+      "[GBA] Boycott Advance",
+      "[GBA] RascalBoy Advance"
+    ]
+  }
+
+.game
+  .game__grid
+    .game__col.game__col--left
+      .game__main
+        .game__col.game__col--50
+          .game__cover
+            img(src='img/romCover.jpg' srcset='img/romCover@2x.jpg 2x')
+          .game__socials
+            include ../socials/_share
+
+        .game__col.game__col--50
+          .game__info
+            .game__info-row
+              span Game title
+              span Pokemon - Fire Red Version (V1.1)
+            .game__info-row
+              span File size
+              span 4.9MB
+            .game__info-row
+              span Region
+              span USA
+            .game__info-row
+              span Console
+              span Gameboy Advance
+                a(href="#") Download emulator
+            .game__info-row
+              span Genre
+              span Role Playing
+            .game__info-row
+              span Downloads
+              span 14,413,247
+            .game__info-row
+              span Rating
+              span
+                .rating.rating--smaller(js-rating)
+                  .rateit.svg-mini(
+                    data-productid="12345"
+                    data-rateit-value="4.5"
+                    data-rateit-starwidth="20"
+                    data-rateit-starheight="15"
+                    data-rateit-resetable="false")
+                  span.rating__number 4.5
+
+          .game__cta
+            a(href="#").btn.btn-green.btn-iconed.btn--block
+              span Download
+                +svgMono("download")
+
+      .game__sponsored
+        .h7-title Sponsored content
+        include ../ads/_boxed
+
+    // sidebar
+    .game__col.game__col--right
+      .game__sidebar
+        .game__list
+          .h7-title Popular ROMs
+          ol.ol-list
+            each row, index in sidebar.roms
+              li
+                a(href="")!= row
+        .game__list
+          .h7-title Top GBA emulators
+          ol.ol-list
+            each row, index in sidebar.emulators
+              li
+                a(href="")!= row

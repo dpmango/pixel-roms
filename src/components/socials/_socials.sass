@@ -1,0 +1,33 @@
+.socials
+  display: flex
+  align-items: flex-start
+  &__btn
+    position: relative
+    z-index: 1
+    overflow: hidden
+    display: inline-block
+    min-size: 40px
+    margin-right: 8px
+    font-size: 0
+    background: #FFFFFF
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16)
+    border-radius: 12px
+    cursor: pointer
+    transition: box-shadow .25s $ease
+    &:hover
+      box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16)
+    .ico
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      &-mono-social
+        &-facebook
+          fill: #3B5998
+          font-size: 24px
+        &-twitter
+          fill: #1DA1F2
+          font-size: 20px
+        &-pinterest
+          fill: #BD081C
+          font-size: 24px

@@ -1,7 +1,7 @@
 .game
-  margin-bottom: 50px
   &__grid
     display: flex
+    flex-wrap: wrap
     margin-left: -12px
     margin-right: -12px
   &__col
@@ -22,6 +22,7 @@
 
   &__main
     display: flex
+    flex-wrap: wrap
     margin-left: -12px
     margin-right: -12px
 
@@ -29,6 +30,9 @@
     font-size: 0
     img
       max-width: 100%
+
+  &__socials
+    margin-top: 1em
 
   &__info
     position: relative
@@ -39,9 +43,9 @@
 
   &__info-row
     display: flex
-    span
+    > span
       display: inline-block
-      padding: 8px 16px
+      padding: 9px 16px 8px
       font-size: 14px
       line-height: 1.42
       a
@@ -76,3 +80,25 @@
     margin-top: 40px
 
   &__sidebar
+
+
++r($lg)
+  .game
+    &__main
+
+    &__col
+      &--50
+        flex-basis: $col12
+        max-width: $col12
+
+    &__info
+      margin-top: 24px
+
++r($md)
+  .game
+    &__col
+      &--left, &--right
+        flex-basis: $col12
+        max-width: $col12
+    &__sidebar
+      margin-top: 24px
