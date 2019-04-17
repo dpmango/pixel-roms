@@ -12,9 +12,9 @@ block content
 
   -
     var list = [
-      {console: "Acorn 8 bit", roms: "2,518", downloads: "84,500,282", size: "469.9KB"},
-      {console: "Acorn Archimedes", roms: "4,259", downloads: "64,204", size: "109.5MB"},
-      {console: "Acorn Electron", roms: "6,214", downloads: "693", size: "2.0GB"},
+      {bios: "Acorn 8 bit", roms: "2,518", downloads: "84,500,282", size: "469.9KB"},
+      {bios: "Acorn Archimedes", roms: "4,259", downloads: "64,204", size: "109.5MB"},
+      {bios: "Acorn Electron", roms: "6,214", downloads: "693", size: "2.0GB"},
     ]
 
 
@@ -45,8 +45,9 @@ block content
               td Total size
           tbody
             each row, index in list
-              tr
-                td!= row.console
+              tr(js-link data-href="bios.html")
+                td
+                  span!= row.bios
                 td!= row.roms
                 td!= row.downloads
                 td!= row.size

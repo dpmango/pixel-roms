@@ -67,8 +67,9 @@ block content
               td Total size
           tbody
             each row, index in list
-              tr
-                td!= row.console
+              tr(js-link data-href="emulators-console.html")
+                td
+                  span!= row.console
                 td!= row.roms
                 td!= row.downloads
                 td!= row.size

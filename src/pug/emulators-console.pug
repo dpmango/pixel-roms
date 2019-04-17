@@ -12,16 +12,16 @@ block content
 
   -
     var list = [
-      {console: "Pokemon - Fire Red Version (V1.1)", platform: "Windows", rating: "4", downloads: "14,413,107"},
-      {console: "Pokemon - Emerald Version", platform: "MacOs", rating: "4.5", downloads: "14,413,107"},
-      {console: "Pokemon - Ruby Version (V1.1)", platform: "Linux", rating: "4.7", downloads: "14,413,107"},
-      {console: "Pokemon - Leaf Green Version (V1.1)", platform: "iOS", rating: "5", downloads: "14,413,107"},
-      {console: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", platform: "Windows", rating: "4.8", downloads: "14,413,107"},
-      {console: "Dragonball Z - Buu's Fury", platform: "Windows", rating: "4.2", downloads: "14,413,107"},
-      {console: "Pokemon - Sapphire Version (V1.1)", platform: "Linus", rating: "3.5", downloads: "14,413,107"},
-      {console: "Super Mario Advance 2 - Super Mario World", platform: "Windows", rating: "3.8", downloads: "14,413,107"},
-      {console: "Classic NES - Super Mario Bros.", platform: "iOS", rating: "2.5", downloads: "14,413,107"},
-      {console: "Grand Theft Auto Advance", platform: "Windows", rating: "3", downloads: "14,413,107"},
+      {emulator: "Pokemon - Fire Red Version (V1.1)", platform: "Windows", rating: "4", downloads: "14,413,107"},
+      {emulator: "Pokemon - Emerald Version", platform: "MacOs", rating: "4.5", downloads: "14,413,107"},
+      {emulator: "Pokemon - Ruby Version (V1.1)", platform: "Linux", rating: "4.7", downloads: "14,413,107"},
+      {emulator: "Pokemon - Leaf Green Version (V1.1)", platform: "iOS", rating: "5", downloads: "14,413,107"},
+      {emulator: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", platform: "Windows", rating: "4.8", downloads: "14,413,107"},
+      {emulator: "Dragonball Z - Buu's Fury", platform: "Windows", rating: "4.2", downloads: "14,413,107"},
+      {emulator: "Pokemon - Sapphire Version (V1.1)", platform: "Linus", rating: "3.5", downloads: "14,413,107"},
+      {emulator: "Super Mario Advance 2 - Super Mario World", platform: "Windows", rating: "3.8", downloads: "14,413,107"},
+      {emulator: "Classic NES - Super Mario Bros.", platform: "iOS", rating: "2.5", downloads: "14,413,107"},
+      {emulator: "Grand Theft Auto Advance", platform: "Windows", rating: "3", downloads: "14,413,107"},
     ]
 
   // CATALOG PAGE
@@ -52,8 +52,9 @@ block content
               td Downloads
           tbody
             each row, index in list
-              tr
-                td!= row.console
+              tr(js-link data-href="emulator.html")
+                td
+                  span!= row.emulator
                 td!= row.platform
                 td
                   .rating

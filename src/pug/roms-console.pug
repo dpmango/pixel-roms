@@ -12,26 +12,26 @@ block content
 
   -
     var list = [
-      {console: "Pokemon - Fire Red Version (V1.1)", rating: "4", downloads: "14,413,107"},
-      {console: "Pokemon - Emerald Version", rating: "4.5", downloads: "14,413,107"},
-      {console: "Pokemon - Ruby Version (V1.1)", rating: "4.7", downloads: "14,413,107"},
-      {console: "Pokemon - Leaf Green Version (V1.1)", rating: "5", downloads: "14,413,107"},
-      {console: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", rating: "4.8", downloads: "14,413,107"},
-      {console: "Dragonball Z - Buu's Fury", rating: "4.2", downloads: "14,413,107"},
-      {console: "Pokemon - Sapphire Version (V1.1)", rating: "3.5", downloads: "14,413,107"},
-      {console: "Super Mario Advance 2 - Super Mario World", rating: "3.8", downloads: "14,413,107"},
-      {console: "Classic NES - Super Mario Bros.", rating: "2.5", downloads: "14,413,107"},
-      {console: "Grand Theft Auto Advance", rating: "3", downloads: "14,413,107"},
-      {console: "Legend Of Zelda, The - The Minish Cap", rating: "2.3", downloads: "14,413,107"},
-      {console: "Pokemon Jupiter - 6.04 (Ruby Hack)", rating: "4.5", downloads: "14,413,107"},
-      {console: "Kirby - Nightmare In Dreamland", rating: "2.4", downloads: "14,413,107"},
-      {console: "Pokemon Black - Special Palace Edition 1 By MB Hacks (Red Hack) Goomba V2.2", rating: "4.5", downloads: "14,413,107"},
-      {console: "Dragonball Z - Supersonic Warriors", rating: "5", downloads: "14,413,107"},
-      {console: "Legend Of Zelda, The - A Link To The Past Four Swords", rating: "4.5", downloads: "14,413,107"},
-      {console: "Naruto - Ninja Council 2", rating: "4", downloads: "14,413,107"},
-      {console: "Pokemon Mystery Dungeon - Red Rescue Team", rating: "1", downloads: "14,413,107"},
-      {console: "Metal Slug Advance", rating: "2", downloads: "14,413,107"},
-      {console: "Pokemon White Version By MB Hacks (Blue Hack)_GoombaV2.2", rating: "3", downloads: "14,413,107"},
+      {game: "Pokemon - Fire Red Version (V1.1)", rating: "4", downloads: "14,413,107"},
+      {game: "Pokemon - Emerald Version", rating: "4.5", downloads: "14,413,107"},
+      {game: "Pokemon - Ruby Version (V1.1)", rating: "4.7", downloads: "14,413,107"},
+      {game: "Pokemon - Leaf Green Version (V1.1)", rating: "5", downloads: "14,413,107"},
+      {game: "Super Mario Advance 4 - Super Mario Bros. 3 (V1.1)", rating: "4.8", downloads: "14,413,107"},
+      {game: "Dragonball Z - Buu's Fury", rating: "4.2", downloads: "14,413,107"},
+      {game: "Pokemon - Sapphire Version (V1.1)", rating: "3.5", downloads: "14,413,107"},
+      {game: "Super Mario Advance 2 - Super Mario World", rating: "3.8", downloads: "14,413,107"},
+      {game: "Classic NES - Super Mario Bros.", rating: "2.5", downloads: "14,413,107"},
+      {game: "Grand Theft Auto Advance", rating: "3", downloads: "14,413,107"},
+      {game: "Legend Of Zelda, The - The Minish Cap", rating: "2.3", downloads: "14,413,107"},
+      {game: "Pokemon Jupiter - 6.04 (Ruby Hack)", rating: "4.5", downloads: "14,413,107"},
+      {game: "Kirby - Nightmare In Dreamland", rating: "2.4", downloads: "14,413,107"},
+      {game: "Pokemon Black - Special Palace Edition 1 By MB Hacks (Red Hack) Goomba V2.2", rating: "4.5", downloads: "14,413,107"},
+      {game: "Dragonball Z - Supersonic Warriors", rating: "5", downloads: "14,413,107"},
+      {game: "Legend Of Zelda, The - A Link To The Past Four Swords", rating: "4.5", downloads: "14,413,107"},
+      {game: "Naruto - Ninja Council 2", rating: "4", downloads: "14,413,107"},
+      {game: "Pokemon Mystery Dungeon - Red Rescue Team", rating: "1", downloads: "14,413,107"},
+      {game: "Metal Slug Advance", rating: "2", downloads: "14,413,107"},
+      {game: "Pokemon White Version By MB Hacks (Blue Hack)_GoombaV2.2", rating: "3", downloads: "14,413,107"},
     ]
 
   // CATALOG PAGE
@@ -63,8 +63,9 @@ block content
               td Downloads
           tbody
             each row, index in list
-              tr
-                td!= row.console
+              tr(js-link data-href="game.html")
+                td
+                  span!= row.game
                 td
                   .rating
                     .rateit.svg(

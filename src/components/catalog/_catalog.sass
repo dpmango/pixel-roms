@@ -51,6 +51,17 @@
         td:last-child
           border-bottom-right-radius: 12px
 
+      &[js-link]
+        cursor: pointer
+        td:first-child
+          span
+            display: inline
+            transition: border .25s $ease
+            border-bottom: 1px solid transparent
+        &:hover
+          td:first-child
+            span
+              border-color: black
 
   // common tabel styles
   tr
@@ -70,7 +81,6 @@
       padding-left: 24px
     &:last-child
       padding-right: 24px
-
 
   &--consoles
     td
