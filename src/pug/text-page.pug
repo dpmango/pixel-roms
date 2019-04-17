@@ -1,0 +1,47 @@
+---
+title: Text page
+---
+extends shared/_layout
+
+include ../components/breadcrumbs/_breadcrumbs
+
+block content
+
+  // header class modifiers binded to pjax
+  div(js-header-class data-class="is-black")
+
+  // CATALOG PAGE
+  .catalog.page-holder
+    .container
+      +breadcrumbs(["Home", "Text page"])
+
+      // TITLE
+      .catalog__title
+        h1.h6-title Text page example
+
+      .catalog__text
+        p.p-big Et modo luptatum definitionem nam, ei quo assum causae platonem. Ius elit feugait no. Graeco laoreet ei sed, vis ea meis adolescens, nonumy abhorreant at ius. Cu ipsum commodo quo, pro saepe dolores scribentur ut. Ea sonet malorum mel.
+
+        h2.h7-title.h-margin Falli errem legere
+
+        p.p-regular Lorem ipsum dolor sit amet, qui ad atqui persius nostrud. Falli errem legere vel ne. Sit ut dico probo tation, sale erant abhorreant eos no, in mundi quaeque consulatu mel. Mentitum philosophia te per, ea affert laudem reprimique sea. Pri esse dicta laoreet in, duo ne tation nonumy civibus.
+
+        p.p-regular Ius ne aperiri facilisi, in vel reque verterem erroribus. Quem purto his ex, nobis semper animal te mei. Ex vide accumsan eloquentiam duo, convenire liberavisse delicatissimi eos in, dico menandri ea vim. In vel probatus accusata, ne qui nullam aperiri accumsan.
+
+        h2.h7-title.h-margin Quaeque consulatu
+
+        ol.ol-list
+          li Ius elit feugait no.
+          li Graeco laoreet ei sed
+          li vis ea meis adolescens, nonumy abhorreant
+          li Cu ipsum commodo quo, pro saepe
+
+        h2.h7-title.h-margin Nonumy abhorreant
+
+        ul.ul-list
+          li Ius elit feugait no.
+          li Graeco laoreet ei sed
+          li vis ea meis adolescens, nonumy abhorreant
+          li Cu ipsum commodo quo, pro saepe
+
+        p.p-regular Lorem ipsum dolor sit amet, qui ad atqui persius nostrud. Falli errem legere vel ne. Sit ut dico probo tation, sale erant abhorreant eos no, in mundi quaeque consulatu mel. Mentitum philosophia te per, ea affert laudem reprimique sea. Pri esse dicta laoreet in, duo ne tation nonumy civibus.

@@ -5,6 +5,9 @@
   line-height: 1.5
   margin: 0.5em 0
 
+.h-margin
+  margin: 2em 0 1em 0
+
 .h1-title
   font-size: 48px
 .h2-title
@@ -80,6 +83,31 @@ p + p
       position: absolute
       top: 0
       left: 0
+  a
+    color: $colorDarkBlue
+    transition: .25s $ease
+    &:hover
+      color: $colorBlue
+
+.ul-list
+  list-style: none
+  margin: 0.5em 0 1em
+  padding: 0
+  li
+    display: block
+    position: relative
+    font-size: 14px
+    line-height: 1.42
+    padding-left: 20px
+    margin-bottom: 0.35em
+    &::before
+      display: inline-block
+      content: " "
+      position: absolute
+      top: 8px
+      left: 0
+      size: 5px
+      background: $colorDarkBlue
   a
     color: $colorDarkBlue
     transition: .25s $ease

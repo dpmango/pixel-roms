@@ -8,7 +8,7 @@ This package intended to solve common front-end development tasks. Works best fo
 - [ ] Manual rateit init because of pjax issues
 - [ ] quick search on homepage
 - [ ] responsive lists
-- [ ] Text pages
+- [x] Text pages
 - [ ] Header scroll controls
 - [ ] refactor componenets
 - [ ] remove unused plugins
