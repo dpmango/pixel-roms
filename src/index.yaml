@@ -6,15 +6,15 @@ PageList:
   - file: roms.html
     ready: 80
   - file: roms-console.html
-    ready: 70
+    ready: 80
   - file: game.html
     ready: 80
   - file: top-roms.html
-    ready: 70
+    ready: 80
   - file: emulators.html
     ready: 80
   - file: emulators-console.html
-    ready: 70
+    ready: 80
   - file: emulator.html
     ready: 80
   - file: bioses.html

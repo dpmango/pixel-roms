@@ -125,6 +125,7 @@
 
 // sorting
 td, th
+  // front classes
   &[role=columnheader]:not(.no-sort)
     cursor: pointer
 
@@ -142,3 +143,17 @@ td, th
     &:hover
       .ico-mono-sorting-arrows
         opacity: .5
+
+  // back classes
+  &[js-link]
+    cursor: pointer
+    &:hover
+      .ico-mono-sorting-arrows
+        opacity: .5
+    &.is-ascending
+      .ico-mono-sorting-down
+        opacity: 1
+
+    &.is-descending
+      .ico-mono-sorting-up
+        opacity: 1

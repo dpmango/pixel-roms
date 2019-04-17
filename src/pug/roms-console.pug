@@ -55,12 +55,27 @@ block content
 
       // LIST
       .catalog__list
+        // this table is back-end sortable
+        // .is-ascending and .is-descending classes to head cells + [js-link]
         table.table.table--roms
           thead
             tr
-              td Game title
-              td Rating
-              td Downloads
+              mixin sortingIcons
+                +svgMono("sorting-arrows")
+                +svgMono("sorting-down")
+                +svgMono("sorting-up")
+              td(js-link data-href="?title=asc")
+                .table__sortable-col
+                  span Game title
+                    +sortingIcons
+              td(js-link data-href="?rating=desc").is-ascending
+                .table__sortable-col
+                  span Rating
+                    +sortingIcons
+              td(js-link data-href="?downloads=asc").is-descending
+                .table__sortable-col
+                  span Downloads
+                    +sortingIcons
           tbody
             each row, index in list
               tr(js-link data-href="game.html")

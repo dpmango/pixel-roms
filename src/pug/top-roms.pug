@@ -52,12 +52,26 @@ block content
 
       // LIST
       .catalog__list
-        table.table.table--roms
+        // this table is fron-end sortable with [js-sortable-table]
+        table.table.table--roms(js-sortable-table)
           thead
             tr
-              td Game title
-              td Rating
-              td Console
+              mixin sortingIcons
+                +svgMono("sorting-arrows")
+                +svgMono("sorting-down")
+                +svgMono("sorting-up")
+              td
+                .table__sortable-col
+                  span Game title
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Rating
+                    +sortingIcons
+              td
+                .table__sortable-col
+                  span Console
+                    +sortingIcons
           tbody
             each row, index in list
               tr(js-link data-href="game.html")
