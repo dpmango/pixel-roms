@@ -8,7 +8,7 @@
       if ($select.length === 0) return;
 
       $select.selectric({
-        maxHeight: 300,
+        maxHeight: 192,
         responsive: true,
         arrowButtonMarkup:
           '<div class="button"><svg class="ico ico-mono-dropdown-arrow"><use xlink:href="img/sprite-mono.svg#ico-mono-dropdown-arrow"></use></svg></div>',

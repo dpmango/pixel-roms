@@ -4,11 +4,12 @@ This package intended to solve common front-end development tasks. Works best fo
 ## TODO
 - [x] fix cards ui
 - [x] fix table ui and sorting
-- [ ] fix selects ui
+- [x] fix selects ui
 - [ ] Manual rateit init because of pjax issues
 - [ ] quick search on homepage
 - [ ] responsive lists
 - [ ] Text pages
+- [ ] Header scroll controls
 - [ ] refactor componenets
 - [ ] remove unused plugins
 - [ ] animation update on homepage

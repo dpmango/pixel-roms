@@ -10,24 +10,25 @@
   width: 100%
 
 .selectric
-  border: 0
+  border: 1px solid transparent
   border-radius: 12px
   background: white
   position: relative
   overflow: hidden
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16);
-  transition: box-shadow .25s $ease
+  transition: box-shadow .25s $ease, border .25s $ease
   .label
     display: block
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
-    margin: 0 38px 0 15px
+    margin: 0 38px 0 20px
     font-size: 16px
-    line-height: 48px
+    line-height: 46px
     color: $fontColorGray
-    height: 48px
+    height: 46px
     user-select: none
+    transition: color .25s $ease
     +text-overflow
   .button
     display: flex
@@ -48,21 +49,20 @@
 
 
 .selectric-focus .selectric
-  border-color: #aaaaaa
+  border-color: black
 
 .selectric-hover .selectric
-  border-color: #c4c4c4
+  border-color: black
   .button
-    color: $colorBlue
+    // color: $colorBlue
 
 .selectric-open
-  z-index: 9999
+  z-index: 8
   .selectric
-    border-color: #c4c4c4
-    border-bottom-left-radius: 0
-    border-bottom-right-radius: 0
-    box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16)
-
+    border-color: black
+    // box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16)
+    .label
+      color: $fontColor
   .selectric-items
     display: block
 
@@ -122,16 +122,14 @@
 .selectric-items
   display: none
   position: absolute
-  top: 100%
+  top: calc(100% + 4px)
   left: 0
   background: white
   border: 0
   z-index: -1
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16)
-  border-bottom-left-radius: 12px
-  border-bottom-right-radius: 12px
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
   overflow: hidden
-  border-top: 2px solid rgba(0, 0, 0, 0.16)
   .selectric-scroll
     height: 100%
     overflow: auto
@@ -139,22 +137,12 @@
 .selectric-above
   &.selectric-open
     .selectric
-      border-top-left-radius: 0
-      border-top-right-radius: 0
-      border-bottom-left-radius: 12px
-      border-bottom-right-radius: 12px
-      box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16)
+      box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16)
 
   .selectric-items
     top: auto
-    bottom: 100%
-    border-bottom-left-radius: 0
-    border-bottom-right-radius: 0
-    border-top-left-radius: 12px
-    border-top-right-radius: 12px
-    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.16)
-    border-top: 0
-    border-bottom: 2px solid rgba(0, 0, 0, 0.16)
+    bottom: calc(100% + 4px)
+    box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16)
 
 .selectric-items
   ul
@@ -165,10 +153,10 @@
     list-style: none
     padding: 0
     margin: 0
-    font-size: 14px
+    font-size: 16px
     line-height: 1.42
     display: block
-    padding: 10px 15px
+    padding: 12px 20px
     color: $fontColor
     cursor: pointer
     transition: .25s $ease
@@ -176,10 +164,10 @@
       background: $colorBlue
       color: white
     &.highlighted
-      background: $colorBlue
-      color: white
+      background: #F3F9FE
+      color: $fontColor
     &:hover:not(.selected)
-      background: rgba($colorBlue, .1)
+      background: #F3F9FE
       color: $fontColor
   .disabled
     filter: alpha(opacity = 50)
