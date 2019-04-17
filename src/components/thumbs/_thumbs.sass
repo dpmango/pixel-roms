@@ -8,9 +8,10 @@
     background-color: #FFFFFF
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
     border-radius: 12px
+    border: 1px solid transparent
     font-size: 0
     padding-bottom: 60%
-    transition: transform .25s $ease, box-shadow .25s $ease
+    transition: background .25s $ease, box-shadow .25s $ease, border .25s $ease
     img
       position: absolute
       top: 50%
@@ -24,15 +25,24 @@
     line-height: 1.42
     text-align: center
     margin-top: 1em
-    transition: color .25s $ease
 
   &:hover
     .c-thumb
       &__image
         // transform: translate3d(0, -7px, 0)
-        box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.08)
-      &__name
-        color: $colorDarkBlue
+        // box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.08)
+        background: #F2F2F2
+  &:focus
+    .c-thumb
+      &__image
+        background: #F2F2F2
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08)
+  &:active
+    .c-thumb
+      &__image
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
+        border-color: black
+
 
 // single thumb rom
 .r-thumb
@@ -42,7 +52,24 @@
     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
     border-radius: 12px
     font-size: 0
-    transition: transform .25s $ease, box-shadow .25s $ease
+    transition: .25s $ease
+    &::after, &::before
+      display: inline-block
+      content: ' '
+      position: absolute 0
+      opacity: 0
+      z-index: 2
+      backface-visibility: hidden
+      will-change: opacity
+      border-radius: 12px
+    &::after
+      // white overlay
+      background: rgba(white, .3)
+      transition: opacity .25s $ease
+    &::before
+      // border emulator
+      border: 1px solid black
+      transition: opacity .25s $ease
 
   &__category
     color: $fontColorGray
@@ -58,8 +85,19 @@
   &:hover
     .r-thumb
       &__image
-        // transform: translate3d(0, -7px, 0)
-        box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.08)
-      &__name
-        color: $colorDarkBlue
+        &::after
+          opacity: 1
 
+  &:focus
+    .r-thumb
+      &__image
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08)
+        &::after
+          opacity: 1
+
+  &:active
+    .r-thumb
+      &__image
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08)
+        &::before
+          opacity: 1
