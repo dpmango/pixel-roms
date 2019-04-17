@@ -58,13 +58,29 @@ block content
 
       // LIST
       .catalog__list
-        table.table.table--consoles
+        table.table.table--consoles(js-sortable-table)
           thead
             tr
-              td Console
-              td Total ROMs
-              td Total downloads
-              td Total size
+              mixin sortingIcons
+                +svgMono("sorting-arrows")
+                +svgMono("sorting-down")
+                +svgMono("sorting-up")
+              td
+                .table__sortable-col
+                  span Console
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Total ROMs
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Total downloads
+                    +sortingIcons
+              td(data-sort-method='filesize')
+                .table__sortable-col
+                  span Total size
+                    +sortingIcons
           tbody
             each row, index in list
               tr(js-link data-href="roms-console.html")

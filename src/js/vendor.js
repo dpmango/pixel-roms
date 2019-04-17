@@ -17,6 +17,7 @@ import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
 import rateit from 'jquery.rateit';
 import sharer from 'sharer.js';
+import tablesort from 'tablesort';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -40,3 +41,4 @@ window.debounce = debounce;
 window.throttle = throttle;
 window.rateit = rateit;
 window.sharer = sharer;
+window.Tablesort = tablesort;

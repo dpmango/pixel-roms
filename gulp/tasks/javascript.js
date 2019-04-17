@@ -62,6 +62,7 @@ gulp.task('javascript:vendor', function() {
 gulp.task('javascript:app', function() {
   return gulp
     .src([
+      config.src.js + '/vendor/**/*.js',
       config.src.js + '/app.js',
       config.src.js + '/modules/**/*.js',
       config.src.components + '/**/*.js',

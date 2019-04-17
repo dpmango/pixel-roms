@@ -82,6 +82,27 @@
     &:last-child
       padding-right: 24px
 
+  &__sortable-col
+    display: flex
+    align-items: center
+    span
+      position: relative
+      padding-right: 14px
+      .ico
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        user-select: none
+        font-size: 14px
+        opacity: 0
+        transition: opacity .25s $ease
+        &-mono-sorting-arrows
+          right: -8px
+        &-mono-sorting-down
+          right: -1px
+        &-mono-sorting-up
+          right: -9px
+
   &--consoles
     td
       &:nth-child(1)
@@ -101,3 +122,23 @@
         width: 20%
       &:nth-child(3)
         width: 20%
+
+// sorting
+td, th
+  &[role=columnheader]:not(.no-sort)
+    cursor: pointer
+
+  &[aria-sort=ascending]:not(.no-sort)
+    .ico-mono-sorting-down
+      opacity: 1
+
+  &[aria-sort=descending]:not(.no-sort)
+    .ico-mono-sorting-up
+      opacity: 1
+
+  &[role=columnheader]:not(.no-sort)
+    // // show only for non-active sorts
+    // &:not([aria-sort])
+    &:hover
+      .ico-mono-sorting-arrows
+        opacity: .5
