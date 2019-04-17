@@ -16,10 +16,10 @@ PageList:
   - file: emulators-console.html
     ready: 60
   - file: emulator.html
-    ready: 0
+    ready: 80
   - file: bioses.html
     ready: 60
   - file: bios.html
-    ready: 0
+    ready: 80
   - file: ui.html
     ready: 10

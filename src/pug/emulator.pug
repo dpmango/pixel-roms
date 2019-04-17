@@ -1,5 +1,5 @@
 ---
-title: ROM
+title: EMULATOR
 ---
 extends shared/_layout
 
@@ -13,18 +13,18 @@ block content
   // GAME PAGE
   .catalog.page-holder
     .container
-      +breadcrumbs(["Home", "ROMs", "Gameboy Advance", "Pokemon - Fire Red Version (V1.1)"])
+      +breadcrumbs(["Home", "Emulators", "Gameboy Advance", "BatGBA"])
 
       // TITLE
       .catalog__title
-        h1.h6-title Pokemon - Fire Red Version (V1.1)
+        h1.h6-title BatGBA
 
       .catalog__ad
         include ../components/ads/_horizontal
 
       // GAME
       .catalog__game
-        include ../components/games/_rom.pug
+        include ../components/games/_emulator.pug
 
       // RECOMENDED
       .catalog__recomended
