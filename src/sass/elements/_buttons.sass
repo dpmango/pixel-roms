@@ -21,22 +21,38 @@ button
     width: 100%
 
 .btn-primary
-  padding: 11px 22px 9px
+  padding: 10px 22px 9px
   background: $colorYellow
+  border: 1px solid transparent
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08), inset 0px 4px 0px rgba(255, 255, 255, 0.24);
   border-radius: 12px
   font-size: 10px
   &:hover
-    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.08), inset 0px -2px 0px rgba(255, 255, 255, 0.24);
+    // box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.08), inset 0px -2px 0px rgba(255, 255, 255, 0.24);
+    background: $colorYellowHover
+  &:focus
+    background: $colorYellowHover
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.08), inset 0px 4px 0px rgba(255, 255, 255, 0.24)
+  &:active
+    border-color: black
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.08), inset 0px 4px 0px rgba(255, 255, 255, 0.24)
 
 .btn-green
-  padding: 18px 50px 17px
+  padding: 17px 50px 16px
   background: $colorGreen
+  border: 1px solid transparent
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16), inset 0px 4px 0px rgba(255, 255, 255, 0.16);
   border-radius: 12px
   font-size: 12px
   &:hover
-    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.08), inset 0px -2px 0px rgba(255, 255, 255, 0.24);
+    // box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.08), inset 0px -2px 0px rgba(255, 255, 255, 0.24);
+    background: $colorGreenHover
+  &:focus
+    background: $colorGreenHover
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16), inset 0px 4px 0px rgba(255, 255, 255, 0.16)
+  &:active
+    border-color: black
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16), inset 0px 4px 0px rgba(255, 255, 255, 0.16)
 
 .btn-iconed
   span
