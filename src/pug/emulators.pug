@@ -58,13 +58,30 @@ block content
 
       // LIST
       .catalog__list
-        table.table.table--consoles
+        // this table is fron-end sortable with [js-sortable-table]
+        table.table.table--consoles(js-sortable-table)
           thead
             tr
-              td Console
-              td Total Emulators
-              td Total downloads
-              td Total size
+              mixin sortingIcons
+                +svgMono("sorting-arrows")
+                +svgMono("sorting-down")
+                +svgMono("sorting-up")
+              td
+                .table__sortable-col
+                  span Console
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Total Emulators
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Total downloads
+                    +sortingIcons
+              td(data-sort-method='number')
+                .table__sortable-col
+                  span Total size
+                    +sortingIcons
           tbody
             each row, index in list
               tr(js-link data-href="emulators-console.html")

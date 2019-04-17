@@ -4,7 +4,7 @@ PageList:
   - file: homepage.html
     ready: 90
   - file: roms.html
-    ready: 70
+    ready: 80
   - file: roms-console.html
     ready: 70
   - file: game.html
@@ -12,13 +12,13 @@ PageList:
   - file: top-roms.html
     ready: 70
   - file: emulators.html
-    ready: 70
+    ready: 80
   - file: emulators-console.html
     ready: 70
   - file: emulator.html
     ready: 80
   - file: bioses.html
-    ready: 70
+    ready: 80
   - file: bios.html
     ready: 80
   - file: ui.html

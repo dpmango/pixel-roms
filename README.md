@@ -3,7 +3,7 @@ This package intended to solve common front-end development tasks. Works best fo
 
 ## TODO
 - [x] fix cards ui
-- [ ] fix table ui and sorting
+- [x] fix table ui and sorting
 - [ ] fix selects ui
 - [ ] quick search on homepage
 - [ ] responsive lists
