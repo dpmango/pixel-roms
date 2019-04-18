@@ -1,5 +1,5 @@
 ////////////////////
-// LAZY LOAD
+// TABLE SORT
 ////////////////////
 (function($, APP) {
   APP.Plugins.Tablesort = {

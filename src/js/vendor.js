@@ -13,6 +13,7 @@ import rateit from 'jquery.rateit';
 import sharer from 'sharer.js';
 import tablesort from 'tablesort';
 import easyAutocomplete from 'easy-autocomplete';
+import stacktable from 'stacktable.js';
 
 // expose imports to window to use in app.js
 // (jquery is exposed in expose-loader)
@@ -32,3 +33,4 @@ window.rateit = rateit;
 window.sharer = sharer;
 window.Tablesort = tablesort;
 window.easyAutocomplete = easyAutocomplete;
+window.stacktable = stacktable;

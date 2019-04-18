@@ -25,6 +25,7 @@
     "lodash": "^4.17.10",
     "picturefill": "^3.0.3",
     "sharer.js": "^0.3.8",
+    "stacktable.js": "^1.0.3",
     "surge": "^0.20.1",
     "svg4everybody": "^2.1.9",
     "tablesort": "^5.1.0",

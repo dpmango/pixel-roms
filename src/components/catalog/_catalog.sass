@@ -128,6 +128,89 @@
       &:nth-child(3)
         width: 20%
 
+// stacktable styles
+.stacktable
+  &.small-only
+    display: none
+
++r($md)
+  .stacktable
+    &.large-only
+      display: none
+    &.small-only
+      display: block
+
++r($md)
+  .table
+    tbody
+      tr
+        // first element is cloned thead first cell
+        &:nth-child(even)
+          background: white
+        // &:nth-child(odd)
+        //   background: white
+        &:nth-child(2)
+          .st-head-row
+            border-top-left-radius: 12px
+            border-top-right-radius: 12px
+            &::after
+              display: none
+        &[js-link]
+          td:first-child
+            span
+              border: 0
+        &.is-name
+          transition: color .25s $ease
+          &.is-hovered
+            color: $colorBlue
+
+    td
+      &.st-key, &.st-val
+        font-size: 14px
+        padding-top: .2em
+        padding-bottom: .2em
+
+  .st-head-row-main
+    display: none
+
+  // used as separator
+  .st-head-row
+    position: relative
+    padding: 20px 24px 5px
+    font-size: 16px
+    text-align: left
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      top: 8px
+      left: 0
+      right: 0
+      background: $borderColor
+      height: 1px
+
++r($sm)
+  .table
+    td
+      // &.st-key, &.st-val
+      //   font-size: 14px
+
+      &:first-child
+        padding-left: 20px
+      &:last-child
+        padding-right: 20px
+
+    .st-head-row
+      padding-left: 20px
+      padding-right: 20px
+
++r(414)
+  .table
+    width: calc(100% + 40px)
+    margin-left: -20px
+    margin-right: -20px
+
+
 // sorting
 td, th
   // front classes

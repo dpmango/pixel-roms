@@ -2,11 +2,9 @@
 This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment
 
 ## TODO
-- [ ] responsive lists
 - [ ] Header scroll controls
 - [ ] Homepage animation 
 - [ ] refactor componenets
-- [ ] animation update on homepage
 - [ ] $ vendors deploy debug
 - [ ] IE fixes, debug
 
