@@ -6,13 +6,13 @@ This package intended to solve common front-end development tasks. Works best fo
 - [x] fix table ui and sorting
 - [x] fix selects ui
 - [x] Manual rateit init because of pjax issues
-- [ ] quick search on homepage
+- [x] quick search on homepage
 - [ ] responsive lists
 - [x] Text pages
 - [ ] Header scroll controls
 - [ ] Homepage animation 
 - [ ] refactor componenets
-- [ ] remove unused plugins
+- [x] remove unused plugins
 - [ ] animation update on homepage
 - [ ] $ vendors deploy debug
 - [ ] IE fixes, debug

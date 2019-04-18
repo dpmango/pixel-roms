@@ -4,6 +4,15 @@
 (function($, APP) {
   APP.Plugins.Rating = {
     init: function() {
+      this.update();
+      this.clickHandlers();
+    },
+    update: function() {
+      if ($('.rateit').length > 0) {
+        $('.rateit').rateit();
+      }
+    },
+    clickHandlers: function() {
       var $rating = $('[js-rating]');
       if ($rating.length === 0) return;
 

@@ -1,0 +1,26 @@
+.filters
+  .filters__keyword
+    .ui-input-iconed(js-input-focus js-input-clearable)
+      .ui-input-ico
+        +svgMono('search')
+      input(type="text" placeholder="Search by Emulator ...").ui-input
+      .ui-input-clear
+        +svgMono('cross')
+
+  .filters__select
+    select(js-select placeholder="Platform")
+      option Windows
+      option MacOS
+      option Linux
+      option iOS
+
+  .filters__select
+    select(js-select placeholder="Region")
+      option Europe
+      option France
+      option Germany
+      option Italy
+      option Japan
+      option Korea
+      option USA
+      option USA Europe

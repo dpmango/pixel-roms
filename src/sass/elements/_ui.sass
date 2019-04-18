@@ -22,7 +22,7 @@
   border: 1px solid transparent
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16);
   border-radius: 12px
-  transition: box-shadow .25s $ease
+  transition: box-shadow .25s $ease, border-color .25s $ease
   &::placeholder
     color: $fontColorGray
   &.has-error
@@ -30,27 +30,52 @@
     &::placeholder
       color: rgba($colorRed, .5)
   &:focus
-    box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16);
+    border-color: black
+    // box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.16);
 
 .ui-input textarea
   resize: vertical
 
 // parent for .ui-input
+.ui-input-clear
+  position: absolute
+  z-index: 2
+  right: 15px
+  top: 50%
+  transform: translateY(-50%)
+  padding: 5px
+  font-size: 0
+  color: rgba($fontColor, .4)
+  opacity: 0
+  pointer-events: none
+  cursor: pointer
+  transition: opacity .25s $ease, color .25s $ease
+  .ico
+    font-size: 17px
+  &:hover
+    color: $fontColor
+
 .ui-input-iconed
   position: relative
   color: rgba($fontColor, .4)
   transition: color .25s $ease
-  .ico
-    position: absolute
-    top: 50%
-    left: 16px
-    transform: translateY(-50%)
-    font-size: 24px
   .ui-input
     padding-left: 52px
   &.is-focused
     color: $fontColor
+  &.is-clearbable
+    .ui-input-clear
+      opacity: 1
+      pointer-events: all
 
+.ui-input-ico
+  .ico
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    &-mono-search
+      left: 16px
+      font-size: 24px
 
 
 /* Checkbox

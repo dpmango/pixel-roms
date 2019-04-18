@@ -1,9 +1,12 @@
 
 // SEARCH FORM
 form.search-form(action="#")
-  .search-form__input.ui-input-iconed(js-input-focus)
-    +svgMono('search')
+  .search-form__input.ui-input-iconed(js-input-focus js-input-clearable)
+    .ui-input-ico
+      +svgMono('search')
     input(type="text" placeholder="Search by ROM names or keywords").ui-input
+    .ui-input-clear
+      +svgMono('cross')
     // TODO - quick search
   .search-form__cta
     button(type="submit").btn.btn-green Search

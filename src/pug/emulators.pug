@@ -52,9 +52,12 @@ block content
       // FILTERS
       .catalog__filters.filters
         .filters__keyword
-          .ui-input-iconed(js-input-focus)
-            +svgMono('search')
-            input(type="text" placeholder="Search for console ...").ui-input
+          .ui-input-iconed(js-input-focus js-input-clearable)
+            .ui-input-ico
+              +svgMono('search')
+            input(type="text" placeholder="Search by console ...").ui-input
+            .ui-input-clear
+              +svgMono('cross')
 
       // LIST
       .catalog__list

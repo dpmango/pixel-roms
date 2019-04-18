@@ -1,8 +1,12 @@
 .filters
   .filters__keyword
-    .ui-input-iconed(js-input-focus)
-      +svgMono('search')
-      input(type="text" placeholder="Search for ROM ...").ui-input
+    .ui-input-iconed(js-input-focus js-input-clearable)
+      .ui-input-ico
+        +svgMono('search')
+      input(type="text" placeholder="Search by ROM ...").ui-input
+      .ui-input-clear
+        +svgMono('cross')
+
   .filters__select
     select(js-select placeholder="Genre")
       option Misc
