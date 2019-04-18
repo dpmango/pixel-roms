@@ -5,11 +5,12 @@ This package intended to solve common front-end development tasks. Works best fo
 - [x] fix cards ui
 - [x] fix table ui and sorting
 - [x] fix selects ui
-- [ ] Manual rateit init because of pjax issues
+- [x] Manual rateit init because of pjax issues
 - [ ] quick search on homepage
 - [ ] responsive lists
 - [x] Text pages
 - [ ] Header scroll controls
+- [ ] Homepage animation 
 - [ ] refactor componenets
 - [ ] remove unused plugins
 - [ ] animation update on homepage
