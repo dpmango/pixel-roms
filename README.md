@@ -2,17 +2,11 @@
 This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment
 
 ## TODO
-- [x] fix cards ui
-- [x] fix table ui and sorting
-- [x] fix selects ui
-- [x] Manual rateit init because of pjax issues
-- [x] quick search on homepage
+- [ ] search suggest for homepage
 - [ ] responsive lists
-- [x] Text pages
 - [ ] Header scroll controls
 - [ ] Homepage animation 
 - [ ] refactor componenets
-- [x] remove unused plugins
 - [ ] animation update on homepage
 - [ ] $ vendors deploy debug
 - [ ] IE fixes, debug
