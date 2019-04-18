@@ -1,0 +1,67 @@
+.easy-autocomplete
+  position: relative
+  input
+  a
+    display: block
+
+.easy-autocomplete-container
+  left: 0
+  top: calc(100% + 4px)
+  position: absolute
+  width: 100%
+  z-index: 2
+  ul
+    background: none repeat scroll 0 0 #ffffff
+    display: none
+    list-style: none
+    margin: 0
+    padding: 0
+    position: relative
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.16)
+    border-radius: 12px
+    overflow: hidden
+    li, .eac-category
+      display: block
+      font-size: 16px
+      line-height: 1.42
+      display: block
+      padding: 12px 20px
+      transition: background .25s $ease
+    li
+      &.selected
+        background: none repeat scroll 0 0 rgba($colorBlue, .1)
+        cursor: pointer
+        div
+          font-weight: normal
+      div
+        display: block
+        font-weight: normal
+        // word-break: break-all
+      b
+        font-weight: bold
+    .eac-category
+      font-color: #aaa
+      font-style: italic
+    .eac-item
+      +text-overflow
+
+
+.eac-description .eac-item span
+  color: #aaa
+  font-style: italic
+  font-size: 0.9em
+
+.eac-icon-left .eac-item img
+  margin-right: 4px
+  max-height: 30px
+
+.eac-icon-right .eac-item
+  margin-top: 8px
+  min-height: 24px
+  position: relative
+  img
+    margin-left: 4px
+    max-height: 30px
+    position: absolute
+    right: -4px
+    top: -8px

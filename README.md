@@ -2,7 +2,6 @@
 This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment
 
 ## TODO
-- [ ] search suggest for homepage
 - [ ] responsive lists
 - [ ] Header scroll controls
 - [ ] Homepage animation 

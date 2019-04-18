@@ -62,6 +62,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Selectric.init();
       APP.Plugins.Rating.init();
       APP.Plugins.Tablesort.init();
+      APP.Plugins.AutoCompleate.init();
       APP.Plugins.InputFocuses.init();
     };
 
