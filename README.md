@@ -1,13 +1,6 @@
 # Gulp Starter Pack
 This package intended to solve common front-end development tasks. Works best for psd/sketch to html projects and save you a lot of time setting up local environment
 
-## TODO
-- [ ] Header scroll controls
-- [ ] Homepage animation 
-- [ ] refactor componenets
-- [ ] $ vendors deploy debug
-- [ ] IE fixes, debug
-
 ## How to start
 * `yarn` or `npm i` - install npm dependencies
 * `gulp` - run dev-server

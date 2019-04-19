@@ -95,11 +95,13 @@
       </g>
       <g id="box-cup" mask="url(#mask-2)">
         <g transform="translate(492 444)">
-          <path fill="#EB933B" d="M28 32v4h8v-4zM56 20h-4v4h4zM8 24h4v-4H8zM56 8h-4v4h4zM8 12h4V8H8z"/>
-          <path fill="#FFDF75" d="M36 56V36h-4v16h-4v4zM44 24h-4v4h4zM48 8h-4v16h4zM56 12h4V8h-4zM8 8H4v4h4z"/>
-          <path fill="#FAC23E" d="M20 56v4h24v-4zM32 36h-4v16h4zM44 28h4v-4h-4z"/>
-          <path fill="#FAC23E" d="M16 28h4v4h24v-4h-4v-4h4V8h4v16h4V4H12v20h4zM8 12H4v8h4zM56 20h4v-8h-4z"/>
-          <path fill="#663931" d="M20 60v-4h-4v8h32v-8h-4v4zM28 56V32h-8v4h4v16h-4v4zM36 32v24h8v-4h-4V36h4v-4zM44 32h4v-4h-4zM16 28v4h4v-4zM48 24v4h8v-4zM8 24v4h8v-4zM56 24h4v-4h-4zM4 20v4h4v-4zM12 12H8v8h4zM56 12h-4v8h4zM4 8H0v12h4zM60 20h4V8h-4zM60 8V4h-8v4zM12 8V4H4v4zM52 4V0H12v4z"/>
+          <g id="cup">
+            <path fill="#EB933B" d="M28 32v4h8v-4zM56 20h-4v4h4zM8 24h4v-4H8zM56 8h-4v4h4zM8 12h4V8H8z"/>
+            <path fill="#FFDF75" d="M36 56V36h-4v16h-4v4zM44 24h-4v4h4zM48 8h-4v16h4zM56 12h4V8h-4zM8 8H4v4h4z"/>
+            <path fill="#FAC23E" d="M20 56v4h24v-4zM32 36h-4v16h4zM44 28h4v-4h-4z"/>
+            <path fill="#FAC23E" d="M16 28h4v4h24v-4h-4v-4h4V8h4v16h4V4H12v20h4zM8 12H4v8h4zM56 20h4v-8h-4z"/>
+            <path fill="#663931" d="M20 60v-4h-4v8h32v-8h-4v4zM28 56V32h-8v4h4v16h-4v4zM36 32v24h8v-4h-4V36h4v-4zM44 32h4v-4h-4zM16 28v4h4v-4zM48 24v4h8v-4zM8 24v4h8v-4zM56 24h4v-4h-4zM4 20v4h4v-4zM12 12H8v8h4zM56 12h-4v8h4zM4 8H0v12h4zM60 20h4V8h-4zM60 8V4h-8v4zM12 8V4H4v4zM52 4V0H12v4z"/>
+          </g>
           <path fill="#EB933B" d="M56 104h4V84h-4zM4 104h4V84H4z"/>
           <path fill="#FFDF75" d="M4 104v4h56v-4zM56 80h4v-4h-4zM40 80v-4H24v4zM8 76H4v4h4z"/>
           <path fill="#FAC23E" d="M36 116v-4h-8v4z"/>
@@ -112,18 +114,71 @@
       </g>
       <g id="boy" mask="url(#mask-2)">
         <g transform="translate(400 452)">
-          <path fill="#5B6EE1" d="M8 116h4v-4H8zM12 112h4v-8h-4zM20 92v4h-4v8h4v-4h4v-4h20v20h4V92z"/>
-          <path fill="#3F3F74" d="M44 120h4v-4h-4zM12 116h4v-4h-4zM16 108h4v-4h-4zM20 104h4v-4h-4zM24 100h4v-4h-4zM20 88v4h28v-4z"/>
-          <path fill="#EEC39A" d="M52 100h4V84h-4zM12 80H8v20h4v-4h4V84h-4z"/>
-          <path d="M52 40h-4v-8h4v8zm-24-8v8h-4v-8h4zm20 16h-4v4H28v-4h-4v-4h4v4h16v-4h4v4zM20 28v4h-4v4h-4v-4H8v8h4v16h4v4h40V28H20z" id="Shape" fill="#EEC39A" fill-rule="nonzero"/>
-          <path fill="#D9A066" d="M52 84h4v-4h-4zM12 84h4v-4h-4zM8 76v4h4v-4zM28 48v4h16v-4zM44 48h4v-4h-4zM24 44v4h4v-4zM16 32h4v-4h-4zM24 24v4h32v-4z"/>
-          <path fill="#8F563B" d="M56 4H28v4h16v4h12v4h4V8h-4z"/>
-          <path fill="#663931" d="M44 120v4h12v-4zM4 120v4h8v-4zM48 64h-8v16h4v4h8v-4h-4zM20 64v16h-4v4h8v-4h4V64zM56 12H44V8H28V4H16v4h-4v8H8v12h4v8h4v-8h8v-4h32v8h4V16h-4z"/>
-          <path fill="#94354D" d="M44 84v4h8v-4zM16 84v4h8v-4zM40 80v4h4v-4zM24 84h4v-4h-4zM48 80h4v-8h-4z"/>
-          <path fill="#D96262" d="M52 72h4v-4h-4zM12 72h4v-4h-4zM48 64v4h4v-4zM16 68h4v-4h-4z"/>
-          <path fill="#AB3C3C" d="M40 64H28v20h-4v4h20v-4h-4zM52 80h4v-8h-4zM48 68v4h4v-4zM16 72h-4v8h8V68h-4z"/>
-          <path fill="#45283C" d="M44 124V96H28v4h12v28h20v-8h-4v4zM8 116v-4H4v8h8v4H4v-4H0v8h16v-12zM16 116h4v-8h-4zM12 104h4v-8h-4v4H8v12h4zM20 108h4v-4h-4zM24 104h4v-4h-4z"/>
-          <path fill="#45283C" d="M52 88h-4v32h8v-4h-4v-12h4v-4h-4zM20 88h-4v8h4zM8 76H4v24h4zM56 100h4V68h-4zM12 68H8v8h4zM16 64h-4v4h4zM16 60v4h36v4h4v-8zM12 56v4h4v-4zM12 40H8v16h4zM56 60h4V32h-4zM48 40h4v-8h-4zM24 40h4v-8h-4zM8 32h4v-4H8V16H4v24h4zM12 8H8v8h4zM60 32h4V8h-4zM60 8V4h-4v4zM16 4h-4v4h4zM56 4V0H16v4z"/>
+          <polygon fill="#5B6EE1" points="8 116 12 116 12 112 8 112"></polygon>
+          <polygon fill="#5B6EE1" points="12 112 16 112 16 104 12 104"></polygon>
+          <polygon fill="#5B6EE1" points="20 92 20 96 16 96 16 104 20 104 20 100 24 100 24 96 44 96 44 116 48 116 48 92"></polygon>
+          <polygon fill="#3F3F74" points="44 120 48 120 48 116 44 116"></polygon>
+          <polygon fill="#3F3F74" points="12 116 16 116 16 112 12 112"></polygon>
+          <polygon fill="#3F3F74" points="16 108 20 108 20 104 16 104"></polygon>
+          <polygon fill="#3F3F74" points="20 104 24 104 24 100 20 100"></polygon>
+          <polygon fill="#3F3F74" points="24 100 28 100 28 96 24 96"></polygon>
+          <polygon fill="#3F3F74" points="20 88 20 92 48 92 48 88"></polygon>
+          <polygon fill="#EEC39A" points="52 100 56 100 56 84 52 84"></polygon>
+          <polygon fill="#EEC39A" points="12 80 8 80 8 100 12 100 12 96 16 96 16 84 12 84"></polygon>
+          <path d="M52,40 L48,40 L48,32 L52,32 L52,40 Z M28,32 L28,40 L24,40 L24,32 L28,32 Z M48,48 L44,48 L44,52 L28,52 L28,48 L24,48 L24,44 L28,44 L28,48 L44,48 L44,44 L48,44 L48,48 Z M20,28 L20,32 L16,32 L16,36 L12,36 L12,32 L8,32 L8,40 L12,40 L12,56 L16,56 L16,60 L56,60 L56,28 L20,28 Z" id="Shape" fill="#EEC39A" fill-rule="nonzero"></path>
+          <polygon fill="#D9A066" points="52 84 56 84 56 80 52 80"></polygon>
+          <polygon fill="#D9A066" points="12 84 16 84 16 80 12 80"></polygon>
+          <polygon fill="#D9A066" points="8 76 8 80 12 80 12 76"></polygon>
+          <polygon fill="#D9A066" points="28 48 28 52 44 52 44 48"></polygon>
+          <polygon fill="#D9A066" points="44 48 48 48 48 44 44 44"></polygon>
+          <polygon fill="#D9A066" points="24 44 24 48 28 48 28 44"></polygon>
+          <polygon fill="#D9A066" points="16 32 20 32 20 28 16 28"></polygon>
+          <polygon fill="#D9A066" points="24 24 24 28 56 28 56 24"></polygon>
+          <polygon fill="#8F563B" points="56 4 28 4 28 8 44 8 44 12 56 12 56 16 60 16 60 8 56 8"></polygon>
+          <polygon fill="#663931" points="44 120 44 124 56 124 56 120"></polygon>
+          <polygon fill="#663931" points="4 120 4 124 12 124 12 120"></polygon>
+          <polygon fill="#663931" points="48 64 40 64 40 80 44 80 44 84 52 84 52 80 48 80"></polygon>
+          <polygon fill="#663931" points="20 64 20 80 16 80 16 84 24 84 24 80 28 80 28 64"></polygon>
+          <polygon fill="#663931" points="56 12 44 12 44 8 28 8 28 4 16 4 16 8 12 8 12 16 8 16 8 28 12 28 12 36 16 36 16 28 24 28 24 24 56 24 56 32 60 32 60 16 56 16"></polygon>
+          <polygon fill="#94354D" points="44 84 44 88 52 88 52 84"></polygon>
+          <polygon fill="#94354D" points="16 84 16 88 24 88 24 84"></polygon>
+          <polygon fill="#94354D" points="40 80 40 84 44 84 44 80"></polygon>
+          <polygon fill="#94354D" points="24 84 28 84 28 80 24 80"></polygon>
+          <polygon fill="#94354D" points="48 80 52 80 52 72 48 72"></polygon>
+          <polygon fill="#D96262" points="52 72 56 72 56 68 52 68"></polygon>
+          <polygon fill="#D96262" points="12 72 16 72 16 68 12 68"></polygon>
+          <polygon fill="#D96262" points="48 64 48 68 52 68 52 64"></polygon>
+          <polygon fill="#D96262" points="16 68 20 68 20 64 16 64"></polygon>
+          <polygon fill="#AB3C3C" points="40 64 28 64 28 84 24 84 24 88 44 88 44 84 40 84"></polygon>
+          <polygon fill="#AB3C3C" points="52 80 56 80 56 72 52 72"></polygon>
+          <polygon fill="#AB3C3C" points="48 68 48 72 52 72 52 68"></polygon>
+          <polygon fill="#AB3C3C" points="16 72 12 72 12 80 20 80 20 68 16 68"></polygon>
+          <polygon fill="#45283C" points="44 124 44 96 28 96 28 100 40 100 40 128 60 128 60 120 56 120 56 124"></polygon>
+          <polygon fill="#45283C" points="8 116 8 112 4 112 4 120 12 120 12 124 4 124 4 120 0 120 0 128 16 128 16 116"></polygon>
+          <polygon fill="#45283C" points="16 116 20 116 20 108 16 108"></polygon>
+          <polygon fill="#45283C" points="12 104 16 104 16 96 12 96 12 100 8 100 8 112 12 112"></polygon>
+          <polygon fill="#45283C" points="20 108 24 108 24 104 20 104"></polygon>
+          <polygon fill="#45283C" points="24 104 28 104 28 100 24 100"></polygon>
+          <polygon fill="#45283C" points="52 88 48 88 48 120 56 120 56 116 52 116 52 104 56 104 56 100 52 100"></polygon>
+          <polygon fill="#45283C" points="20 88 16 88 16 96 20 96"></polygon>
+          <polygon fill="#45283C" points="8 76 4 76 4 100 8 100"></polygon>
+          <polygon fill="#45283C" points="56 100 60 100 60 68 56 68"></polygon>
+          <polygon fill="#45283C" points="12 68 8 68 8 76 12 76"></polygon>
+          <polygon fill="#45283C" points="16 64 12 64 12 68 16 68"></polygon>
+          <polygon fill="#45283C" points="16 60 16 64 52 64 52 68 56 68 56 60"></polygon>
+          <polygon fill="#45283C" points="12 56 12 60 16 60 16 56"></polygon>
+          <polygon fill="#45283C" points="12 40 8 40 8 56 12 56"></polygon>
+          <polygon fill="#45283C" points="56 60 60 60 60 32 56 32"></polygon>
+            <polygon fill="#EEC39A" points="48 40 52 40 52 32 48 32"></polygon>
+            <polygon fill="#EEC39A" points="24 40 28 40 28 32 24 32"></polygon>
+            <polygon id="eye-2" fill="#45283C" points="48 40 52 40 52 32 48 32"></polygon>
+            <polygon id="eye-1" fill="#45283C" points="24 40 28 40 28 32 24 32"></polygon>
+          <polygon fill="#45283C" points="8 32 12 32 12 28 8 28 8 16 4 16 4 40 8 40"></polygon>
+          <polygon fill="#45283C" points="12 8 8 8 8 16 12 16"></polygon>
+          <polygon fill="#45283C" points="60 32 64 32 64 8 60 8"></polygon>
+          <polygon fill="#45283C" points="60 8 60 4 56 4 56 8"></polygon>
+          <polygon fill="#45283C" points="16 4 12 4 12 8 16 8"></polygon>
+          <polygon fill="#45283C" points="56 4 56 0 16 0 16 4"></polygon>
         </g>
       </g>
       <g id="tree-left" mask="url(#mask-2)">
