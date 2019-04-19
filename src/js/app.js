@@ -66,6 +66,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Plugins.Stacktable.init(fromPjax);
       APP.Plugins.AutoCompleate.init();
       APP.Plugins.InputFocuses.init();
+      APP.Plugins.DISQUS.init();
     };
 
     // All components from `src/componenets`
