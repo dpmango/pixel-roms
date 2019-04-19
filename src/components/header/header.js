@@ -10,13 +10,17 @@
         stickyPoint: undefined,
       },
     },
-    init: function() {
-      this.getHeaderParams();
+    init: function(fromPjax) {
+      if (!fromPjax) {
+        this.getHeaderParams();
+        this.hamburgerClickListener();
+        this.mobileNaviClickListener();
+        this.listenScroll();
+        this.listenResize();
+      }
+
       this.setMenuClass();
       this.controlHeaderClass();
-      this.hamburgerClickListener();
-      this.listenScroll();
-      this.listenResize();
     },
     getHeaderParams: function() {
       var $header = $('.header');
@@ -44,6 +48,14 @@
         $('.mobile-navi').toggleClass('is-active');
 
         APP.Plugins.ScrollBlock.blockScroll();
+      });
+    },
+    mobileNaviClickListener: function() {
+      var _this = this;
+      _document.on('click', '.mobile-navi', function(e) {
+        if ($(e.target).closest('.mobile-navi__wrapper').length === 0) {
+          _this.closeMobileMenu();
+        }
       });
     },
     listenScroll: function() {

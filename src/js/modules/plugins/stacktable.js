@@ -3,10 +3,12 @@
 ////////////////////
 (function($, APP) {
   APP.Plugins.Stacktable = {
-    init: function() {
+    init: function(fromPjax) {
       var _this = this;
 
-      var $tables = $('[js-stacktable]');
+      var $tables = $('.page')
+        .last()
+        .find('[js-stacktable]');
       if ($tables.length === 0) return;
       $tables.each(function(i, table) {
         $(table).stacktable();
@@ -17,8 +19,12 @@
     },
     copyAttrs: function() {
       // coppy tr attributes from original table to cloned
-      var $tableOriginal = $('[js-stacktable]');
-      var $tableTarget = $('.stacktable.small-only');
+      var $tableOriginal = $('.page')
+        .last()
+        .find('[js-stacktable]');
+      var $tableTarget = $('.page')
+        .last()
+        .find('.stacktable.small-only');
 
       if ($tableOriginal.length === 0) return;
       var $rowsOriginal = $tableOriginal.find('tbody tr');
@@ -48,10 +54,13 @@
     },
     listenHovers: function() {
       var _this = this;
-      $('.stacktable.small-only tr').on('mouseenter', function() {
-        $('.stacktable.small-only tr.is-name').removeClass('is-hovered');
-        _this.findNameRow(this).addClass('is-hovered');
-      });
+      $('.page')
+        .last()
+        .find('.stacktable.small-only tr')
+        .on('mouseenter', function() {
+          $('.stacktable.small-only tr.is-name').removeClass('is-hovered');
+          _this.findNameRow(this).addClass('is-hovered');
+        });
     },
     findNameRow: function(tr) {
       var $tr = $(tr);

@@ -15,7 +15,7 @@
       if ($cover.length === 0) return;
       var $target = $($cover.data('watch'));
 
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth > 768) {
         $cover.css({
           'min-height': $target.outerHeight(),
         });

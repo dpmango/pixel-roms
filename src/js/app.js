@@ -31,8 +31,9 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     app.refresh = function() {
       APP.Components.Header.closeMobileMenu(true);
-      app.initPlugins();
-      app.initComponents();
+      APP.Plugins.Sharer.refresh();
+      app.initPlugins(true);
+      app.initComponents(true);
     };
 
     app.destroy = function() {};
@@ -58,18 +59,18 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     // Plugins which depends on DOM and page content
-    app.initPlugins = function() {
+    app.initPlugins = function(fromPjax) {
       APP.Plugins.Selectric.init();
       APP.Plugins.Rating.init();
       APP.Plugins.Tablesort.init();
-      APP.Plugins.Stacktable.init();
+      APP.Plugins.Stacktable.init(fromPjax);
       APP.Plugins.AutoCompleate.init();
       APP.Plugins.InputFocuses.init();
     };
 
     // All components from `src/componenets`
-    app.initComponents = function() {
-      APP.Components.Header.init();
+    app.initComponents = function(fromPjax) {
+      APP.Components.Header.init(fromPjax);
       APP.Components.Hero.init();
       APP.Components.Game.init();
     };

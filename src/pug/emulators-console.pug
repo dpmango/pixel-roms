@@ -76,11 +76,11 @@ block content
                 td!= row.platform
                 td
                   .rating
-                    .rateit.svg(
+                    //- data-rateit-starwidth="28"
+                    //- data-rateit-starheight="22"
+                    .rateit.svg.resizable(
                       data-rateit-value=row.rating
                       data-rateit-readonly="true"
-                      data-rateit-starwidth="28"
-                      data-rateit-starheight="22"
                       data-rateit-resetable="false")
                     span.rating__number!= row.rating
                 td!= row.downloads

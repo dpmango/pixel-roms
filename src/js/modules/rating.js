@@ -6,6 +6,7 @@
     init: function() {
       this.update();
       this.clickHandlers();
+      this.resizeListener();
     },
     update: function() {
       if ($('.rateit').length > 0) {
@@ -46,6 +47,33 @@
           // });
         });
       });
+    },
+    resizeListener: function() {
+      var _this = this;
+      _this.resizeStars();
+      _window.on('resize', debounce(_this.resizeStars, 200));
+    },
+    resizeStars: function() {
+      var $ratitResizable = $('.rateit.resizable');
+      if ($ratitResizable.length === 0) return;
+
+      if (window.innerWidth <= 768) {
+        $ratitResizable.each(function(i, rateit) {
+          $(rateit)
+            .removeClass('svg')
+            .addClass('svg-mini')
+            .rateit('starwidth', 20)
+            .rateit('starheight', 15);
+        });
+      } else {
+        $ratitResizable.each(function(i, rateit) {
+          $(rateit)
+            .removeClass('svg-mini')
+            .addClass('svg')
+            .rateit('starwidth', 28)
+            .rateit('starheight', 22);
+        });
+      }
     },
   };
 })(jQuery, window.APP);
