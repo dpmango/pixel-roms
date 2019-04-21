@@ -45,6 +45,9 @@
     display: flex
     > span
       display: inline-block
+      width: 100%
+      min-width: 1px
+      min-height: 0
       padding: 9px 16px 8px
       font-size: 14px
       line-height: 1.42
@@ -56,10 +59,12 @@
           color: $colorBlue
       &:first-child
         flex: 0 0 40%
+        max-width: 40%
         color: #808080
         padding-right: 8px
       &:last-child
         flex: 0 0 60%
+        max-width: 60%
         padding-left: 8px
 
     &:nth-child(odd)
