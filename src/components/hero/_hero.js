@@ -4,19 +4,7 @@
 (function($, APP) {
   APP.Components.Hero = {
     init: function() {
-      this.startGif();
       this.animateEyes();
-    },
-    startGif: function() {
-      var $coins = $('[js-coins] img');
-      if ($coins.length === 0) return;
-
-      $coins.each(function(i, coin) {
-        var $coin = $(coin);
-        setTimeout(function() {
-          $coin.attr('src', $coin.data('src'));
-        }, i * 225); // 900 total
-      });
     },
     animateEyes: function() {
       var _this = this;

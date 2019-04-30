@@ -11,7 +11,7 @@
     flex: 1 1 auto
     position: relative
     z-index: 1
-    svg
+    svg, img
       position: absolute
       top: 50%
       left: 50%
@@ -37,7 +37,7 @@
 +r($sm)
   .hero
     &__background
-      svg
+      svg, img
         // left: 68%
         min-width: 200%
         transform: translate3d(-50%,-50%,0)
@@ -50,6 +50,8 @@
 +r(414)
   .hero__background  svg
     transform: translate3d(-68%,-50%,0)
+  img
+    display: none
 
 // animation part
 .hero__background svg
@@ -66,18 +68,3 @@
     transform: translateY(0)
   50%
     transform: translateY(-5px)
-
-.bg-coins
-  position: absolute 0
-  display: flex
-  align-items: flex-end
-  justify-content: flex-end
-  margin-right: 16%
-  margin-bottom: 20vh
-  img
-    margin-right: 16px
-
-
-+r($sm)
-  .bg-coins
-    display: none
